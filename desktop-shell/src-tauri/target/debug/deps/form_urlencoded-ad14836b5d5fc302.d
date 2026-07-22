@@ -1,5 +1,0 @@
-/Users/mac/Desktop/openmontage-desktop/desktop-shell/src-tauri/target/debug/deps/form_urlencoded-ad14836b5d5fc302.d: /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/form_urlencoded-1.2.2/src/lib.rs
-
-/Users/mac/Desktop/openmontage-desktop/desktop-shell/src-tauri/target/debug/deps/libform_urlencoded-ad14836b5d5fc302.rmeta: /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/form_urlencoded-1.2.2/src/lib.rs
-
-/Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/form_urlencoded-1.2.2/src/lib.rs:
