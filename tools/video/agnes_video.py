@@ -206,7 +206,7 @@ class AgnesVideo(BaseTool):
         try:
             submit_resp = None
             last_submit_error: Exception | None = None
-            for _attempt in range(3):
+            for _attempt in range(5):
                 try:
                     submit_resp = requests.post(
                         f"{base_url}/videos",
@@ -214,10 +214,18 @@ class AgnesVideo(BaseTool):
                         json=payload,
                         timeout=30,
                     )
+                    if submit_resp.status_code in (429, 502, 503):
+                        retry_after = int(submit_resp.headers.get("Retry-After", "65"))
+                        last_submit_error = Exception(
+                            f"HTTP {submit_resp.status_code}: {submit_resp.text[:200]}"
+                        )
+                        time.sleep(retry_after)
+                        continue
                     submit_resp.raise_for_status()
                     break
-                except requests.exceptions.HTTPError:
-                    raise
+                except requests.exceptions.HTTPError as e:
+                    last_submit_error = e
+                    time.sleep(5)
                 except Exception as e:  # SSL/连接类瞬时错误
                     last_submit_error = e
                     time.sleep(3)
@@ -257,7 +265,16 @@ class AgnesVideo(BaseTool):
                     )
                     status_resp.raise_for_status()
                     consecutive_errors = 0
-                except requests.exceptions.HTTPError:
+                except requests.exceptions.HTTPError as e:
+                    if e.response.status_code in (429, 502, 503):
+                        consecutive_errors += 1
+                        if consecutive_errors >= max_consecutive_network_errors:
+                            return ToolResult(
+                                success=False,
+                                error=f"Agnes 状态轮询连续失败 {consecutive_errors} 次: HTTP {e.response.status_code}（任务 ID: {video_id}）",
+                            )
+                        time.sleep(10)
+                        continue
                     raise
                 except Exception as e:
                     consecutive_errors += 1
@@ -280,11 +297,15 @@ class AgnesVideo(BaseTool):
                         error=f"Agnes 视频生成失败: {error_msg}",
                     )
 
-            video_url = status_data.get("metadata", {}).get("url")
+            video_url = (
+                status_data.get("url")
+                or status_data.get("video_url")
+                or status_data.get("metadata", {}).get("url")
+            )
             if not video_url:
                 return ToolResult(
                     success=False,
-                    error=f"Agnes API 完成响应中缺少 metadata.url: {status_data}",
+                    error=f"Agnes API 完成响应中缺少视频 URL: {status_data}",
                 )
 
             video_response = requests.get(video_url, timeout=180)

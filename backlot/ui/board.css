@@ -1040,3 +1040,254 @@ body:not(.first) .approval-review { animation: none; }
   .approval-review-foot button { width: 100%; }
   .approval-status { white-space: normal; }
 }
+
+
+/* 新建项目按钮 */
+.new-project-btn {
+  padding: 6px 16px;
+  border: 1px solid var(--amber);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--amber);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.new-project-btn:hover {
+  background: var(--amber);
+  color: #fff;
+}
+
+/* 新建项目对话框 */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-dialog {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  width: 420px;
+  max-width: 90vw;
+}
+.modal-dialog h2 {
+  margin: 0 0 20px;
+  font-size: 18px;
+  color: var(--text);
+}
+.modal-field {
+  margin-bottom: 16px;
+}
+.modal-field label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-2);
+  margin-bottom: 6px;
+}
+.modal-field input, .modal-field select {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+}
+.modal-field input:focus, .modal-field select:focus {
+  border-color: var(--amber);
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 24px;
+}
+.btn-cancel {
+  padding: 8px 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-2);
+  cursor: pointer;
+  font-size: 14px;
+}
+.btn-cancel:hover { background: var(--surface-2); }
+.btn-confirm {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--amber);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+.btn-confirm:hover { opacity: 0.9; }
+
+/* 素材生成面板 */
+.gen-panel {
+  max-width: 900px;
+  margin: 16px auto;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.gen-modes {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.gen-mode-btn {
+  padding: 6px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-2);
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+.gen-mode-btn.active {
+  border-color: var(--amber);
+  background: var(--amber-dim);
+  color: var(--amber);
+}
+.gen-mode-btn:hover {
+  border-color: var(--amber);
+}
+.gen-prompt {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+}
+.gen-prompt:focus {
+  border-color: var(--amber);
+}
+.gen-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+.gen-btn {
+  padding: 8px 24px;
+  border: none;
+  border-radius: 8px;
+  background: var(--amber);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.gen-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+.gen-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: var(--surface-3);
+  color: var(--text-3);
+  border: 1px solid var(--border);
+}
+.gen-status {
+  font-size: 13px;
+  color: var(--text-2);
+}
+.gen-status.ok { color: var(--green); }
+.gen-status.err { color: var(--red); }
+.gen-assets {
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+.gen-assets-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-2);
+  margin-bottom: 12px;
+}
+.gen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+.gen-thumb {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface-2);
+}
+.gen-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* 返回按钮 */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-size: calc(13px * var(--fs-scale));
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-right: 12px;
+}
+.back-btn:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+/* 项目卡片删除按钮 */
+.lib-card-wrap {
+  position: relative;
+}
+.lib-del {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lib-card-wrap:hover .lib-del {
+  opacity: 1;
+}
+.lib-del:hover {
+  background: var(--red);
+}

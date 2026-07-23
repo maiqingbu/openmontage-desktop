@@ -156,7 +156,19 @@ fn start_backlot(
 
     if spawned.is_none() {
         let root = dev_project_root();
-        let python = ["python3", "python"]
+        // 优先查找 venv Python，然后回退系统 Python
+        let venv_python = root.join(".venv/bin/python");
+        let candidates: Vec<PathBuf> = if venv_python.exists() {
+            vec![venv_python]
+        } else {
+            vec![
+                PathBuf::from("/usr/local/bin/python3.12"),
+                PathBuf::from("/usr/local/bin/python3"),
+                PathBuf::from("python3"),
+                PathBuf::from("python"),
+            ]
+        };
+        let python = candidates
             .iter()
             .find(|cmd| {
                 Command::new(cmd)

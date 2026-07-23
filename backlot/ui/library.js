@@ -2,7 +2,7 @@ import { el, fmtAgo, getJSON, subscribe, thumbURL } from "/ui/lib.js";
 
 const grid = document.getElementById("grid");
 const THEME_KEY = "backlot.theme";
-let currentTheme = localStorage.getItem(THEME_KEY) === "light" ? "light" : "dark";
+let currentTheme = localStorage.getItem(THEME_KEY) === "dark" ? "dark" : "light";
 
 const STATUS_LABELS = {
   completed: "已完成",
@@ -71,7 +71,7 @@ function card(p) {
   );
 
   const staticSuffix = new URLSearchParams(location.search).has("static") ? "?static=1" : "";
-  return el("a", { class: `lib-card${p.live ? " live-card" : ""}`, href: `/p/${p.project_id}${staticSuffix}`, style: "text-decoration:none;color:inherit" },
+  const card = el("a", { class: `lib-card${p.live ? " live-card" : ""}`, href: `/p/${p.project_id}${staticSuffix}`, style: "text-decoration:none;color:inherit" },
     poster,
     el("div", { class: "lib-body" },
       el("h3", {}, (p.title || p.project_id).toUpperCase()),
@@ -79,6 +79,46 @@ function card(p) {
       p.stage_states.length ? miniRail(p.stage_states) : null,
     ),
   );
+
+  let delConfirming = false;
+  const delBtn = el("button", {
+    class: "lib-del",
+    title: "删除项目",
+    onclick: async (ev) => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      if (!delConfirming) {
+        delConfirming = true;
+        delBtn.textContent = "?";
+        delBtn.style.background = "var(--red)";
+        delBtn.style.opacity = "1";
+        setTimeout(() => {
+          if (delConfirming) {
+            delConfirming = false;
+            delBtn.textContent = "✕";
+            delBtn.style.background = "";
+          }
+        }, 3000);
+        return;
+      }
+      delBtn.textContent = "⏳";
+      try {
+        const resp = await fetch(`/api/project/${encodeURIComponent(p.project_id)}`, { method: "DELETE" });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        await render();
+      } catch (err) {
+        alert("删除失败: " + err.message);
+        delConfirming = false;
+        delBtn.textContent = "✕";
+        delBtn.style.background = "";
+      }
+    },
+  }, "✕");
+
+  // wrapper 不用 <a>，用 <div> 包裹，<a> 和 button 平级
+  const wrapper = el("div", { class: "lib-card-wrap", style: "position:relative" });
+  wrapper.append(card, delBtn);
+  return wrapper;
 }
 
 async function render() {
@@ -97,3 +137,60 @@ render().catch(console.error);
 if (!new URLSearchParams(location.search).has("static")) {
   subscribe("/api/library/events", () => render().catch(console.error));
 }
+
+
+// ---- 新建项目 ----
+async function loadPipelineTypes() {
+  const sel = document.getElementById("newProjectPipeline");
+  if (sel.children.length) return;
+  const types = await getJSON("/api/pipeline-types");
+  for (const t of types) {
+    const opt = document.createElement("option");
+    opt.value = t.id;
+    opt.textContent = t.name;
+    sel.append(opt);
+  }
+}
+
+window.showNewProjectDialog = function() {
+  loadPipelineTypes();
+  document.getElementById("newProjectModal").style.display = "flex";
+  document.getElementById("newProjectTitle").focus();
+};
+
+window.hideNewProjectDialog = function() {
+  document.getElementById("newProjectModal").style.display = "none";
+  document.getElementById("newProjectTitle").value = "";
+};
+
+window.createProject = async function() {
+  const title = document.getElementById("newProjectTitle").value.trim();
+  if (!title) { alert("请输入项目标题"); return; }
+  const pipeline = document.getElementById("newProjectPipeline").value;
+  try {
+    const resp = await fetch("/api/projects", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({title, pipeline_type: pipeline}),
+    });
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      throw new Error(err.detail || `HTTP ${resp.status}`);
+    }
+    const data = await resp.json();
+    hideNewProjectDialog();
+    // 跳转到项目看板
+    location.href = `/p/${data.project_id}`;
+  } catch (e) {
+    alert("创建失败: " + e.message);
+  }
+};
+
+// Enter 键提交
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && document.getElementById("newProjectModal").style.display === "flex") {
+    createProject();
+  } else if (e.key === "Escape" && document.getElementById("newProjectModal").style.display === "flex") {
+    hideNewProjectDialog();
+  }
+});

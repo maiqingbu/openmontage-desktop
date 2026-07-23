@@ -13,7 +13,7 @@ const modal = document.getElementById("modal");
 const player = document.getElementById("player");
 
 const THEME_KEY = "backlot.theme";
-let currentTheme = localStorage.getItem(THEME_KEY) === "light" ? "light" : "dark";
+let currentTheme = localStorage.getItem(THEME_KEY) === "dark" ? "dark" : "light";
 let state = null;
 let selectedStage = null;   // stage drawer open for this stage name
 let activeRender = 0;
@@ -92,6 +92,7 @@ function renderSlate(s) {
   return el("header", { class: "slate" },
     el("div", { class: "clapper" }),
     el("div", {},
+      el("a", { class: "back-btn", href: "/", title: "返回素材库", style: "text-decoration:none" }, "← 返回"),
       el("a", { class: "wordmark", href: "/", style: "text-decoration:none" }, "Backlot"),
       el("h1", {}, s.title),
     ),
@@ -918,6 +919,167 @@ function renderNoState(s) {
       "遵循检查点协议的运行会显示完整的看板。"));
 }
 
+// ---------------------------------------------------------------------------
+// 素材生成面板
+// ---------------------------------------------------------------------------
+
+let genMode = "image"; // "image" 或 "video"
+let genPrompt = "";
+let genLoading = false;
+let genStatus = "";
+let _genPollTimer = null; // 生成任务轮询定时器
+
+function renderGeneratePanel(s) {
+  const panel = el("div", { class: "gen-panel" });
+
+  panel.append(el("div", { class: "section-title" }, "素材生成",
+    el("span", { class: "meta" }, "Agnes AI · 输入提示词生成图片或视频")));
+
+  // 模式切换
+  const modeBar = el("div", { class: "gen-modes" });
+  const imgBtn = el("button", {
+    class: `gen-mode-btn${genMode === "image" ? " active" : ""}`,
+    onclick: () => { genMode = "image"; render(); },
+  }, "🖼️ 文生图");
+  const vidBtn = el("button", {
+    class: `gen-mode-btn${genMode === "video" ? " active" : ""}`,
+    onclick: () => { genMode = "video"; render(); },
+  }, "🎬 文生视频");
+  modeBar.append(imgBtn, vidBtn);
+  panel.append(modeBar);
+
+  // 生成按钮（提前声明以便 oninput 引用）
+  const btnRow = el("div", { class: "gen-actions" });
+  const genBtn = el("button", {
+    class: "gen-btn",
+    type: "button",
+    disabled: genLoading || !genPrompt.trim(),
+    onclick: async () => {
+      if (!genPrompt.trim()) return;
+      // 清理之前的轮询
+      if (_genPollTimer) { clearInterval(_genPollTimer); _genPollTimer = null; }
+      genLoading = true;
+      genStatus = "提交生成任务...";
+      render();
+      try {
+        const resp = await fetch(`/api/project/${encodedProjectId}/generate`, {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({prompt: genPrompt.trim(), mode: genMode}),
+        });
+        if (!resp.ok) {
+          const err = await resp.json().catch(() => ({}));
+          throw new Error(err.detail || `HTTP ${resp.status}`);
+        }
+        const data = await resp.json();
+        const taskId = data.task_id;
+        genStatus = "任务已提交，等待 Agnes 处理...";
+        render();
+        // 轮询任务状态（每 1.5 秒）
+        _genPollTimer = setInterval(async () => {
+          try {
+            const sr = await fetch(`/api/project/${encodedProjectId}/generate/status/${taskId}`);
+            if (!sr.ok) {
+              if (sr.status === 404) {
+                clearInterval(_genPollTimer); _genPollTimer = null;
+                genLoading = false;
+                genStatus = "✕ 生成失败：任务已过期或不存在";
+                render();
+              }
+              return;
+            }
+            const st = await sr.json();
+            if (st.status === "succeeded") {
+              clearInterval(_genPollTimer); _genPollTimer = null;
+              genLoading = false;
+              genStatus = `✓ 生成成功：${st.result.path}`;
+              genPrompt = "";
+              render();
+              await refresh();
+            } else if (st.status === "failed") {
+              clearInterval(_genPollTimer); _genPollTimer = null;
+              genLoading = false;
+              genStatus = `✕ 生成失败：${st.error || "未知错误"}`;
+              render();
+            } else {
+              // 更新进度显示
+              const pct = st.progress || 0;
+              const msg = st.message || "处理中...";
+              genStatus = `◌ ${msg} ${pct}%`;
+              render();
+            }
+          } catch (e) {
+            // 网络瞬时错误，继续轮询（不停止）
+          }
+        }, 1500);
+      } catch (e) {
+        genLoading = false;
+        genStatus = `✕ 生成失败：${e.message}`;
+        render();
+      }
+    },
+  }, genLoading ? "生成中..." : "▶ 生成");
+  btnRow.append(genBtn);
+
+  if (genStatus) {
+    const statusEl = el("div", {
+      class: `gen-status${genStatus.startsWith("✕") ? " err" : genStatus.startsWith("✓") ? " ok" : ""}`,
+    }, genStatus);
+    btnRow.append(statusEl);
+  }
+
+  // 提示词输入
+  const textarea = el("textarea", {
+    class: "gen-prompt",
+    placeholder: genMode === "image" ? "描述你想要的画面，例如：夕阳下的海边小镇，暖色调，电影感" : "描述你想要的视频，例如：海浪拍打沙滩的慢动作",
+    oninput: (e) => {
+      genPrompt = e.target.value;
+      genBtn.disabled = genLoading || !genPrompt.trim();
+    },
+  });
+  textarea.value = genPrompt;
+
+  // 组装面板
+  panel.append(textarea);
+  panel.append(btnRow);
+
+  // 已有素材列表 — 从 API 加载
+  const assetsSection = el("div", { class: "gen-assets" });
+  assetsSection.append(el("div", { class: "gen-assets-title" }, "项目素材"));
+
+  const assetsGrid = el("div", { class: "gen-grid" });
+  assetsSection.append(assetsGrid);
+
+  // 异步加载素材列表
+  (async () => {
+    try {
+      const resp = await fetch(`/api/project/${encodeURIComponent(s.project_id)}/assets`);
+      if (!resp.ok) return;
+      const data = await resp.json();
+      const all = [
+        ...(data.images || []).map(i => ({...i, type: "image"})),
+        ...(data.videos || []).map(v => ({...v, type: "video"})),
+      ];
+      if (!all.length) {
+        assetsGrid.append(el("div", { style: "color:var(--text-3);font-size:13px;padding:12px 0" }, "暂无素材"));
+        return;
+      }
+      for (const item of all) {
+        const thumb = el("div", { class: "gen-thumb" });
+        if (item.type === "image") {
+          thumb.append(el("img", { src: `/media/${encodeURIComponent(s.project_id)}/${item.path}`, loading: "lazy", alt: item.name }));
+        } else {
+          thumb.append(el("video", { src: `/media/${encodeURIComponent(s.project_id)}/${item.path}`, muted: "", preload: "metadata", style: "width:100%;height:100%;object-fit:cover" }));
+        }
+        assetsGrid.append(thumb);
+      }
+    } catch (e) { /* 静默失败 */ }
+  })();
+
+  panel.append(assetsSection);
+  return panel;
+}
+
 function renderAwaitingNotice(s) {
   const awaiting = s.stages.find((x) => x.status === "awaiting_human");
   if (!awaiting) return null;
@@ -1109,6 +1271,8 @@ function render() {
   if (awaitingNotice) app.append(awaitingNotice);
   const noState = renderNoState(s);
   if (noState) app.append(noState);
+  const genPanel = renderGeneratePanel(s);
+  if (genPanel) app.append(genPanel);
 
   const main = el("div", { class: "main-col" });
   const approvalReview = renderApprovalReview(s);
