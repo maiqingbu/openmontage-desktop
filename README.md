@@ -4,22 +4,22 @@
 
 <h1 align="center">OpenMontage</h1>
 
-<p align="center"><strong>The first open-source, agentic video production system.</strong></p>
+<p align="center"><strong>首个开源的、智能体化（agentic）的视频制作系统。</strong></p>
 
 <p align="center">
   <a href="https://openmontage.video"><img src="https://img.shields.io/badge/Website-openmontage.video-d14a28?style=for-the-badge" alt="openmontage.video"></a>
 </p>
 
 <p align="center">
-  <a href="#start-from-a-video-you-already-love">Paste A Video</a> &nbsp;·&nbsp;
-  <a href="#quick-start">Quick Start</a> &nbsp;·&nbsp;
-  <a href="#try-these-prompts">Try These Prompts</a> &nbsp;·&nbsp;
-  <a href="#pipelines">Pipelines</a> &nbsp;·&nbsp;
-  <a href="#how-it-works">How It Works</a> &nbsp;·&nbsp;
-  <a href="#sponsors">Sponsors</a> &nbsp;·&nbsp;
-  <a href="docs/PROVIDERS.md">Providers</a> &nbsp;·&nbsp;
-  <a href="docs/PR_REVIEW_GUIDE.md">Review Guide</a> &nbsp;·&nbsp;
-  <a href="AGENT_GUIDE.md">Agent Guide</a>
+  <a href="#从你喜爱的视频开始">粘贴参考视频</a> &nbsp;·&nbsp;
+  <a href="#快速开始">快速开始</a> &nbsp;·&nbsp;
+  <a href="#试试这些提示词">试试这些提示词</a> &nbsp;·&nbsp;
+  <a href="#管线">管线</a> &nbsp;·&nbsp;
+  <a href="#工作原理">工作原理</a> &nbsp;·&nbsp;
+  <a href="#赞助商">赞助商</a> &nbsp;·&nbsp;
+  <a href="docs/PROVIDERS.md">服务提供商</a> &nbsp;·&nbsp;
+  <a href="docs/PR_REVIEW_GUIDE.md">评审指南</a> &nbsp;·&nbsp;
+  <a href="AGENT_GUIDE.md">智能体指南</a>
 </p>
 
 <p align="center">
@@ -30,12 +30,12 @@
   <a href="https://github.com/trending">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset=".github/assets/repo-of-the-day-dark.svg">
-      <img alt="🏆 #1 Repository of the Day on GitHub Trending" src=".github/assets/repo-of-the-day-light.svg" height="60">
+      <img alt="🏆 GitHub Trending 当日排名第一的仓库" src=".github/assets/repo-of-the-day-light.svg" height="60">
     </picture>
   </a>
 </p>
 
-<p align="center"><strong>Follow The Build</strong></p>
+<p align="center"><strong>关注开发进展</strong></p>
 
 <p align="center">
   <a href="https://www.youtube.com/@OpenMontage"><img src="https://img.shields.io/badge/YouTube-%40OpenMontage-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"></a>
@@ -43,21 +43,21 @@
   <a href="https://github.com/calesthio/OpenMontage/discussions"><img src="https://img.shields.io/badge/Community-GitHub%20Discussions-0b1220?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Discussions"></a>
 </p>
 
-## Sponsors
+## 赞助商
 
-> Want to support OpenMontage? [Sponsor the project](https://github.com/sponsors/calesthio).
+> 想要支持 OpenMontage？[赞助本项目](https://github.com/sponsors/calesthio)。
 
 <details open>
-<summary>Click to collapse</summary>
+<summary>点击折叠</summary>
 
 <table>
 <tr>
 <td width="180" align="center"><a href="https://bloome.im/app?ref=calesthio&utm_medium=github&utm_source=calesthio-OpenMontage-ivor-202607"><img src="assets/sponsors/bloome.png" alt="Bloome" width="150"></a></td>
-<td><strong>Bloome</strong> lets multiple AI agents (Claude, ChatGPT, DeepSeek, and more) collaborate in one conversation for agentic video pipelines. It has zero setup, runs in the cloud, works on web and mobile, and lets you share a configured agent with your whole team. <strong><a href="https://bloome.im/app?ref=calesthio&utm_medium=github&utm_source=calesthio-OpenMontage-ivor-202607">Try Bloome</a></strong>.</td>
+<td><strong>Bloome</strong> 让多个 AI 智能体（Claude、ChatGPT、DeepSeek 等）在同一会话中协作，适用于智能体化的视频管线。它零配置、云端运行，支持网页和移动端，还可以把配置好的智能体分享给整个团队。<strong><a href="https://bloome.im/app?ref=calesthio&utm_medium=github&utm_source=calesthio-OpenMontage-ivor-202607">试用 Bloome</a></strong>。</td>
 </tr>
 <tr>
 <td width="180" align="center"><a href="https://www.atlascloud.ai/coding-plan"><img src="assets/sponsors/atlas-cloud.png" alt="Atlas Cloud" width="150"></a></td>
-<td><strong>Atlas Cloud</strong> is a full-modal AI inference platform that gives developers a single AI API for video generation, image generation, and LLM APIs. Instead of managing multiple vendor integrations, you connect once and get unified access to 300+ curated models across all modalities. Check out Atlas Cloud's new <a href="https://www.atlascloud.ai/coding-plan">coding plan</a> promotion for more budget-friendly API access.</td>
+<td><strong>Atlas Cloud</strong> 是一个全模态 AI 推理平台，为开发者提供覆盖视频生成、图像生成和 LLM 的统一 AI API。无需逐一对接多家厂商，接入一次即可统一调用 300+ 精选模型。欢迎了解 Atlas Cloud 全新的 <a href="https://www.atlascloud.ai/coding-plan">coding plan</a> 促销活动，享受更实惠的 API 使用方案。</td>
 </tr>
 </table>
 
@@ -65,117 +65,117 @@
 
 ---
 
-Turn your AI coding assistant into a full video production studio. Describe what you want in plain language — your agent handles research, scripting, asset generation, editing, and final composition.
+把你的 AI 编程助手变成一座完整的视频制作工作室。用自然语言描述你想要什么——智能体会负责调研、脚本、资产生成、剪辑和最终合成。
 
-**Important distinction:** OpenMontage can make image-based videos, but it can also make a real **video video** for free/open-source workflows: the agent builds a corpus from free stock footage and open archives, retrieves actual motion clips, edits them into a timeline, and renders a finished piece. That is not the usual "animate a handful of stills and call it video" trick.
+**重要区别：** OpenMontage 可以制作基于图像的视频，但它也能在免费/开源工作流下制作真正的**动态视频（video video）**：智能体会从免费素材库和开放档案中构建语料库，检索真实的动态影像片段，把它们剪进时间线，并渲染出成品。这可不是常见的“让几张静态图动起来就称之为视频”的把戏。
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/f77ce7a4-68b8-4f94-a287-e94bf50a32e1" width="100%" controls></video>
 </div>
 
-> **"SIGNAL FROM TOMORROW"** — a cinematic sci-fi trailer fully produced through OpenMontage: concept, script, scene plan, Veo-generated motion clips, soundtrack, and Remotion composition.
+> **《来自明天的信号》（SIGNAL FROM TOMORROW）**——一部完全通过 OpenMontage 制作的电影感科幻预告片：概念、脚本、场景规划、Veo 生成的动态片段、配乐和 Remotion 合成。
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/8daca07f-cdf8-4bec-89c3-9dc2176363fa" width="100%" controls></video>
 </div>
 
-> **"THE LAST BANANA"** — a 60-second Pixar-style animated short about a lonely banana who finds friendship with a kiwi. 6 Kling v3-generated motion clips (via fal.ai), Google Chirp3-HD narration, royalty-free piano music, TikTok-style word-level captions, and Remotion composition. Total cost: **$1.33**.
+> **《最后一根香蕉》（THE LAST BANANA）**——一部 60 秒皮克斯风格动画短片，讲述一根孤独的香蕉与一颗猕猴桃结下友谊的故事。6 个 Kling v3 生成的动态片段（通过 fal.ai）、Google Chirp3-HD 旁白、免版税钢琴音乐、TikTok 风格逐词字幕和 Remotion 合成。总成本：**$1.33**。
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/e03b5d1f-1199-4093-9f31-a43aa9da2c68" width="100%" controls></video>
 </div>
 
-> **"The Library at Alexandria"** — a 70-second history elegy on what humanity lost in a single night. Five hand-authored scenes — an illuminated manuscript page, cascading scroll-tags, a Burning Counter ticking 700,000 → 0 inside a candle's flame, a charred vellum fragment with surviving Greek, and an empty void — set to OpenAI 'ash' narration and a free Pixabay strings score. Total cost: **$0.02**. Built through OpenMontage's atelier (bespoke) composition mode — every scene crafted from scratch, no shared components.
+> **《亚历山大图书馆》（The Library at Alexandria）**——一部 70 秒的历史挽歌，讲述人类在一夜之间失去的一切。五个手工打造的场景——一页泥金装饰手抄本、倾泻而下的卷轴标签、在烛焰中从 700,000 倒数到 0 的“燃烧计数器”、一块残留希腊文的烧焦羊皮纸碎片，以及一片空无一物的虚空——配以 OpenAI “ash” 旁白和免费的 Pixabay 弦乐配乐。总成本：**$0.02**。通过 OpenMontage 的 atelier（定制）合成模式构建——每个场景都从零打造，不使用共享组件。
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/8a6d2cc3-7ad2-46f5-922f-a8e3e5848d9f" width="100%" controls></video>
 </div>
 
-> **"VOID — Neural Interface"** — a product ad produced with just one API key (OpenAI). 4 AI-generated images (gpt-image-1), TTS narration, auto-sourced royalty-free music, word-level subtitles via WhisperX, and Remotion data visualizations. Total cost: **$0.69**. Zero manual asset work.
+> **《VOID —— 神经接口》**——仅用一把 API 密钥（OpenAI）制作的产品广告。4 张 AI 生成图像（gpt-image-1）、TTS 旁白、自动获取的免版税音乐、WhisperX 逐词字幕和 Remotion 数据可视化。总成本：**$0.69**。零手工素材工作。
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/3c5d7122-7198-43e2-a97d-ed27558dd324" width="100%" controls></video>
 </div>
 
-> **"Afternoon in Candyland"** — a Ghibli-style anime animation. A little girl's whimsical afternoon adventure through candy gates, gumdrop rivers, and lollipop gardens. 12 FLUX-generated images with multi-image crossfade, cinematic camera motion (zoom, pan, Ken Burns), sparkle/petal/firefly particle overlays, and ambient music with auto-detected energy offset. Total cost: **$0.15**. No video generation, no manual editing.
+> **《糖果乐园的午后》（Afternoon in Candyland）**——吉卜力风格动画。一个小女孩穿过糖果大门、软糖河流和棒棒糖花园的奇幻午后冒险。12 张 FLUX 生成图像，多图交叉淡化，电影感运镜（推、拉、Ken Burns），闪光/花瓣/萤火虫粒子叠加，以及带自动能量偏移检测的环境音乐。总成本：**$0.15**。无视频生成、无手工剪辑。
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/e8dc5e32-5c70-46de-bd52-eef887719d13" width="100%" controls></video>
 </div>
 
-> **"Mori no Seishin"** — a Ghibli-style anime animation of a forest spirit's journey through ancient woods. 12 FLUX-generated images with parallax crossfade, drift and pan camera motion, firefly and petal particles, cinematic vignette lighting, and ambient forest soundtrack. Total cost: **$0.15**. Still images brought to life through Remotion's animation engine.
+> **《森之精》（Mori no Seishin）**——吉卜力风格动画，讲述森林精灵穿越古老森林的旅程。12 张 FLUX 生成图像，视差交叉淡化、漂移与平移运镜、萤火虫与花瓣粒子、电影感暗角灯光，以及环境森林音轨。总成本：**$0.15**。静态图像通过 Remotion 动画引擎焕发新生。
 
 <p align="center">
-  <a href="https://www.youtube.com/@OpenMontage?sub_confirmation=1"><strong>Subscribe to @OpenMontage on YouTube</strong></a> to see new videos as they ship — every video includes the full prompt, pipeline, tools used, and cost so you can reproduce it yourself.
+  <a href="https://www.youtube.com/@OpenMontage?sub_confirmation=1"><strong>在 YouTube 上订阅 @OpenMontage</strong></a>，第一时间看到新视频——每条视频都会附上完整提示词、所用管线、工具和成本，方便你自己复现。
 </p>
 
 ---
 
-## Start From A Video You Already Love
+## 从你喜爱的视频开始
 
-Starting from a reference video is often faster than starting from a blank prompt.
+从参考视频出发，往往比从空白提示词开始更快。
 
-OpenMontage can start from a **YouTube video, Short, Reel, TikTok, or local clip** and turn it into a grounded production plan:
+OpenMontage 可以从 **YouTube 视频、Short、Reel、TikTok 或本地片段**出发，把它变成一份有据可依的制作方案：
 
-1. **Paste a reference video**
-2. **The agent analyzes transcript, pacing, scenes, keyframes, and style**
-3. **You get 2-3 differentiated concepts, an honest tool path, cost estimates, and a sample before full production**
+1. **粘贴一条参考视频**
+2. **智能体分析转写文本、节奏、场景、关键帧和风格**
+3. **在全面制作开始之前，你会得到 2-3 个差异化创意方向、一条诚实的工具路径、成本估算和一段样片**
 
 ```text
-"Here's a YouTube Short I love. Make me something like this, but about quantum computing."
+“这是我很喜欢的一条 YouTube Short。给我做一个类似的，但主题换成量子计算。”
 ```
 
-What you get back is not "best guess prompt spaghetti." You get:
+你得到的不是“拍脑袋猜出来的提示词大杂烩”，而是：
 
-- **What it keeps** from the reference: pacing, hook style, structure, tone
-- **What it changes**: topic, visual treatment, angle, narration approach
-- **What it will cost** at your target duration, before asset generation starts
-- **What it will actually look like** with your currently available tools
+- **它保留了**参考视频的什么：节奏、开场钩子风格、结构、基调
+- **它改变了**什么：主题、视觉处理、角度、旁白方式
+- **要花多少钱**：按你的目标时长，在资产生成开始之前给出
+- **实际会是什么样子**：基于你当前可用的工具
 
-Works with **Claude Code, Cursor, Copilot, Windsurf, Codex** — any AI coding assistant that can read files and run code.
+适用于 **Claude Code、Cursor、Copilot、Windsurf、Codex**——任何能读文件、能运行代码的 AI 编程助手。
 
 ---
 
-## Watch It Happen — The Backlot Living Storyboard
+## 实时观看制作过程 — Backlot 动态故事板
 
-Chat tells you what the agent *said*. **Backlot shows you what the production is actually doing** — a local board that fills itself in as the pipeline runs. Stages light up, the script lands as a screenplay page, scene cards shimmer while assets generate, and every provider decision and dollar spent is on the wall.
+聊天窗口只能告诉你智能体*说了什么*；**Backlot 让你看到制作实际在做什么**——一块本地看板会随着管线运行自动填充。阶段依次点亮，脚本以剧本页面形式落位，场景卡片在资产生成时闪烁，每个提供商决策和花掉的每一美元都展示在墙上。
 
-When a production starts, the agent opens it for you automatically. No setup, no reporting — the board derives everything from the project files the pipeline already writes.
+制作启动时，智能体会自动为你打开它。无需配置、无需额外汇报——看板的一切内容都来自管线本来就会写入的项目文件。
 
-<p align="center"><img src="docs/images/backlot/board-live.png" alt="Backlot live board — assets generating" width="920"></p>
+<p align="center"><img src="docs/images/backlot/board-live.png" alt="Backlot 实时看板——资产正在生成" width="920"></p>
 
-**The storyboard is now a real approval gate.** Asset generation pauses on a scene-by-scene contact sheet — takes, prompts, per-asset cost, quality scores — so you approve the visuals *before* the render, not after it's too late:
+**故事板现在是一个真正的审批关卡。** 资产生成会按场景暂停在逐场景的联系表（contact sheet）上——候选镜头、提示词、单资产成本、质量评分——让你在渲染*之前*批准画面，而不是等到无法挽回时：
 
-<p align="center"><img src="docs/images/backlot/storyboard.png" alt="Backlot storyboard — filmstrip with takes and renders" width="920"></p>
+<p align="center"><img src="docs/images/backlot/storyboard.png" alt="Backlot 故事板——带候选镜头和渲染结果的胶片条" width="920"></p>
 
-Creative gates hold until you answer. The board shows what's waiting and why; you reply in chat:
+创意关卡会持续等待，直到你答复。看板会显示正在等待什么、为什么等待；你在聊天中回复即可：
 
-<p align="center"><img src="docs/images/backlot/script-gate.png" alt="Backlot script gate — awaiting approval" width="920"></p>
+<p align="center"><img src="docs/images/backlot/script-gate.png" alt="Backlot 脚本关卡——等待批准" width="920"></p>
 
-Every production on your machine, live-first, in the library:
+你机器上的每一次制作，实时优先，尽入库中：
 
-<p align="center"><img src="docs/images/backlot/library.png" alt="Backlot library" width="920"></p>
+<p align="center"><img src="docs/images/backlot/library.png" alt="Backlot 库" width="920"></p>
 
 ```bash
-python -m backlot open                  # the library — every project on disk
-python -m backlot open <project-id>     # one production's live board
-python scripts/backlot_simulate_run.py  # no production yet? watch a simulated one live
+python -m backlot open                  # 库——磁盘上的每个项目
+python -m backlot open <project-id>     # 单个制作的实时看板
+python scripts/backlot_simulate_run.py  # 还没有制作？观看一场模拟制作的实时过程
 ```
 
-And when a run is done, hit **▶ REPLAY RUN** — the whole production replays from its timestamps, scrubbable end to end. See [`backlot/README.md`](backlot/README.md) for how it works.
+当一次运行结束后，点击 **▶ REPLAY RUN**——整个制作过程会按时间戳完整回放，从头到尾可拖动查看。工作原理详见 [`backlot/README.md`](backlot/README.md)。
 
 ---
 
-## Quick Start
+## 快速开始
 
-### Prerequisites
+### 环境要求
 
-- **Python 3.10+** — [python.org](https://www.python.org/downloads/)
-- **FFmpeg** — `brew install ffmpeg` / `sudo apt install ffmpeg` / [ffmpeg.org](https://ffmpeg.org/download.html)
-- **Node.js 18+** — [nodejs.org](https://nodejs.org/)
-- **An AI coding assistant** — Claude Code, Cursor, Copilot, Windsurf, or Codex
+- **Python 3.10+** —— [python.org](https://www.python.org/downloads/)
+- **FFmpeg** —— `brew install ffmpeg` / `sudo apt install ffmpeg` / [ffmpeg.org](https://ffmpeg.org/download.html)
+- **Node.js 18+** —— [nodejs.org](https://nodejs.org/)
+- **一个 AI 编程助手** —— Claude Code、Cursor、Copilot、Windsurf 或 Codex
 
-### Install & Run
+### 安装与运行
 
 ```bash
 git clone https://github.com/calesthio/OpenMontage.git
@@ -183,492 +183,492 @@ cd OpenMontage
 make setup
 ```
 
-Open the project in your AI coding assistant and tell it what you want:
+在你的 AI 编程助手中打开项目，告诉它你想要什么：
 
 ```
-"Make a 60-second animated explainer about how neural networks learn"
+“制作一个 60 秒关于神经网络如何学习的动画讲解视频”
 ```
 
-Or if you want the real-footage path:
+或者如果你想要实拍素材路线：
 
 ```text
-"Make a 75-second documentary montage about city life in the rain. Use real footage only, no narration, elegiac tone, with music."
+“制作一个 75 秒关于雨中城市生活的纪实混剪。只用实拍素材，不要旁白，挽歌般的基调，带配乐。”
 ```
 
-That's it. The agent researches your topic with live web search, generates AI images, writes and narrates the script with voice direction, finds royalty-free background music automatically, burns in word-level subtitles, and renders the final video. Before you see anything, the system runs a multi-point self-review — ffprobe validation, frame sampling, audio level analysis, delivery promise verification, and subtitle checks. Every provider selection is scored across 7 dimensions with an auditable decision log. Every creative decision gets your approval.
+就这样。智能体会用实时网络搜索调研你的主题，生成 AI 图像，以配音导演级的指导撰写并朗读脚本，自动寻找免版税背景音乐，烧录逐词字幕，并渲染最终视频。在你看到任何成果之前，系统会执行多点自审——ffprobe 校验、抽帧采样、音频电平分析、交付承诺核验和字幕检查。每个提供商选择都会跨 7 个维度评分，并留有可审计的决策日志。每个创意决策都需要你的批准。
 
-> **No `make`?** macOS/Linux: `python3 -m venv .venv && source .venv/bin/activate && python -m pip install -r requirements.txt && cd remotion-composer && npm install && cd .. && python -m pip install piper-tts && cp .env.example .env`
+> **没有 `make`？** macOS/Linux：`python3 -m venv .venv && source .venv/bin/activate && python -m pip install -r requirements.txt && cd remotion-composer && npm install && cd .. && python -m pip install piper-tts && cp .env.example .env`
 >
-> Windows PowerShell: `py -3 -m venv .venv; .\.venv\Scripts\Activate.ps1; python -m pip install -r requirements.txt; cd remotion-composer; npm install; cd ..; python -m pip install piper-tts; Copy-Item .env.example .env`
+> Windows PowerShell：`py -3 -m venv .venv; .\.venv\Scripts\Activate.ps1; python -m pip install -r requirements.txt; cd remotion-composer; npm install; cd ..; python -m pip install piper-tts; Copy-Item .env.example .env`
 >
-> **Windows:** If `npm install` fails with `ERR_INVALID_ARG_TYPE`, use `npx --yes npm install` instead.
+> **Windows：** 如果 `npm install` 报 `ERR_INVALID_ARG_TYPE` 错误，请改用 `npx --yes npm install`。
 
-### If You're An OpenClaw Agent Reading This, Congratulations: You Probably Passed The Turing Test
+### 如果你是一个正在阅读本文的 OpenClaw 智能体，恭喜你：你很可能已经通过了图灵测试
 
-This repo is built for agentic operation. If you're an OpenClaw-style agent, here is the shortest path to becoming useful fast:
+这个仓库是为智能体化操作而构建的。如果你是 OpenClaw 风格的智能体，以下是快速变得有用的最短路径：
 
-1. **Read the contract first**
-   Start with [`AGENT_GUIDE.md`](AGENT_GUIDE.md), then [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md).
-2. **Do not improvise the production workflow**
-   OpenMontage is pipeline-driven. Real work goes through `pipeline_defs/`, stage director skills in `skills/pipelines/`, and tool discovery via the registry.
-3. **Check the actual capability envelope**
-   Run:
+1. **先读契约**
+   从 [`AGENT_GUIDE.md`](AGENT_GUIDE.md) 开始，然后是 [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md)。
+2. **不要即兴发挥制作流程**
+   OpenMontage 由管线驱动。真正的工作通过 `pipeline_defs/`、`skills/pipelines/` 中的阶段导演技能以及注册表的工具发现来完成。
+3. **检查实际的能力范围**
+   运行：
    ```bash
    python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.support_envelope(), indent=2))"
    python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.provider_menu(), indent=2))"
    ```
-4. **Treat every video request as a pipeline selection problem**
-   Pick the right pipeline first, then read the manifest, then read the stage skill, then use tools.
+4. **把每个视频请求都当作管线选择问题**
+   先选对管线，再读清单，再读阶段技能，最后使用工具。
 
-### Add API Keys (optional — more keys = more tools)
+### 添加 API 密钥（可选——密钥越多，可用工具越多）
 
 ```bash
-# .env — every key is optional, add what you have
+# .env —— 每个密钥都是可选的，按需添加
 
-# Image + video gateway:
-FAL_KEY=your-key               # FLUX images + Google Veo, Kling, MiniMax video + Recraft images
-ATLASCLOUD_API_KEY=your-key    # Atlas Cloud — Seedream/Nano Banana/GPT Image + Kling/Seedance/Hailuo video
+# 图像 + 视频网关：
+FAL_KEY=your-key               # FLUX 图像 + Google Veo、Kling、MiniMax 视频 + Recraft 图像
+ATLASCLOUD_API_KEY=your-key    # Atlas Cloud —— Seedream/Nano Banana/GPT Image + Kling/Seedance/Hailuo 视频
 
-# Kling official direct API:
-KLING_API_KEY=your-key         # Official Kling video, image, TTS, avatar, lip sync
-KLING_API_BASE_URL=            # Optional; default Singapore API endpoint
+# Kling 官方直连 API：
+KLING_API_KEY=your-key         # Kling 官方视频、图像、TTS、数字人、唇形同步
+KLING_API_BASE_URL=            # 可选；默认为新加坡 API 端点
 
-# Free stock media:
-PEXELS_API_KEY=your-key        # Free stock footage and images
-PIXABAY_API_KEY=your-key       # Free stock footage and images
-UNSPLASH_ACCESS_KEY=your-key   # Free stock images
+# 免费素材媒体：
+PEXELS_API_KEY=your-key        # 免费素材影像与图片
+PIXABAY_API_KEY=your-key       # 免费素材影像与图片
+UNSPLASH_ACCESS_KEY=your-key   # 免费素材图片
 
-# Music:
-SUNO_API_KEY=your-key          # Full songs, instrumentals, any genre
+# 音乐：
+SUNO_API_KEY=your-key          # 完整歌曲、伴奏，任意曲风
 
-# Voice & images:
-ELEVENLABS_API_KEY=your-key    # Premium TTS, AI music, sound effects
-OPENAI_API_KEY=your-key        # OpenAI TTS, GPT Image 2 images
-XAI_API_KEY=your-key           # xAI Grok image edits/generation + Grok video generation
-GOOGLE_API_KEY=your-key        # Google Imagen images, Google TTS (700+ voices)
+# 语音与图像：
+ELEVENLABS_API_KEY=your-key    # 高品质 TTS、AI 音乐、音效
+OPENAI_API_KEY=your-key        # OpenAI TTS、GPT Image 2 图像
+XAI_API_KEY=your-key           # xAI Grok 图像编辑/生成 + Grok 视频生成
+GOOGLE_API_KEY=your-key        # Google Imagen 图像、Google TTS（700+ 声音）
 
-# More video providers:
-HEYGEN_API_KEY=your-key        # HeyGen — VEO, Sora, Runway, Kling via single gateway
-RUNWAY_API_KEY=your-key        # Runway Gen-4 direct
+# 更多视频提供商：
+HEYGEN_API_KEY=your-key        # HeyGen —— 通过单一网关使用 VEO、Sora、Runway、Kling
+RUNWAY_API_KEY=your-key        # Runway Gen-4 直连
 ```
 
 <details>
-<summary><strong>Have a GPU? Unlock free local video generation</strong></summary>
+<summary><strong>有 GPU？解锁免费的本地视频生成</strong></summary>
 
 ```bash
 make install-gpu
 
-# Then add to .env:
+# 然后添加到 .env：
 VIDEO_GEN_LOCAL_ENABLED=true
-VIDEO_GEN_LOCAL_MODEL=wan2.1-1.3b  # or wan2.1-14b, hunyuan-1.5, ltx2-local, cogvideo-5b
+VIDEO_GEN_LOCAL_MODEL=wan2.1-1.3b  # 或 wan2.1-14b、hunyuan-1.5、ltx2-local、cogvideo-5b
 ```
 
 </details>
 
 ---
 
-## What You Get With Zero API Keys
+## 零 API 密钥能获得什么
 
-You don't need paid API keys to make real videos. Out of the box, `make setup` gives you:
+制作真正的视频并不需要付费 API 密钥。开箱即用，`make setup` 就为你提供：
 
-| Capability | Free Tool | What It Does |
+| 能力 | 免费工具 | 作用 |
 |-----------|-----------|-------------|
-| **Narration** | Piper TTS | Free offline text-to-speech — real human-sounding narration |
-| **Open footage** | Archive.org + NASA + Wikimedia Commons | Free/open archival footage, educational media, and documentary texture |
-| **Extra stock** | Pexels + Unsplash + Pixabay | Free stock footage/images (developer keys are free to get) |
-| **Composition (React)** | Remotion | React-based rendering — spring-animated image scenes, text cards, stat cards, charts, TikTok-style word-level captions, TalkingHead |
-| **Composition (HTML/GSAP)** | HyperFrames | HTML/CSS/GSAP rendering — kinetic typography, product promos, launch reels, registry blocks, website-to-video, rigged SVG character animation |
-| **Post-production** | FFmpeg | Encoding, subtitle burn-in, audio mixing, color grading |
-| **Subtitles** | Built-in | Auto-generated captions with word-level timing |
+| **旁白** | Piper TTS | 免费离线文本转语音——接近真人声线的旁白 |
+| **开放影像** | Archive.org + NASA + Wikimedia Commons | 免费/开放的档案影像、教育媒体与纪实质感素材 |
+| **更多素材** | Pexels + Unsplash + Pixabay | 免费素材影像/图片（开发者密钥可免费申请） |
+| **合成（React）** | Remotion | 基于 React 的渲染——弹簧动画图像场景、文字卡片、数据卡片、图表、TikTok 风格逐词字幕、TalkingHead |
+| **合成（HTML/GSAP）** | HyperFrames | HTML/CSS/GSAP 渲染——动态字体排版、产品宣传片、发布集锦、注册表积木、网页转视频、绑定好的 SVG 角色动画 |
+| **后期制作** | FFmpeg | 编码、字幕烧录、混音、调色 |
+| **字幕** | 内置 | 自动生成带逐词时间轴的字幕 |
 
-OpenMontage picks between Remotion and HyperFrames at proposal time (locked as `render_runtime`). Remotion is the default for data-driven explainers and anything using the existing React scene stack; HyperFrames is the default for motion-graphics-heavy briefs that express naturally as HTML + GSAP, including the `character-animation` pipeline's SVG/GSAP rig output. See `skills/core/hyperframes.md` for the full decision matrix.
+OpenMontage 会在提案阶段在 Remotion 和 HyperFrames 之间做出选择（锁定为 `render_runtime`）。Remotion 是数据驱动讲解视频以及使用现有 React 场景栈时的默认选择；HyperFrames 是动态图形比重较大、天然适合用 HTML + GSAP 表达的 brief 的默认选择，包括 `character-animation` 管线的 SVG/GSAP 绑定输出。完整的决策矩阵见 `skills/core/hyperframes.md`。
 
-**Two free-ish paths:**
+**两条（近乎）免费的路线：**
 
-- **Image-based video:** Piper narrates your script, images provide the visuals, and Remotion animates them into a polished edit.
-- **Local character animation:** SVG rigs, pose libraries, GSAP timelines, and HyperFrames render cartoon character acting to `projects/<project-name>/renders/final.mp4`.
-- **Real-footage video:** the documentary montage pipeline builds a CLIP-searchable corpus from Archive.org, NASA, Wikimedia Commons, and optional free-key sources like Pexels and Unsplash, then cuts together actual motion footage into a finished video.
+- **基于图像的视频：** Piper 朗读你的脚本，图像提供画面，Remotion 把它们动画化成精剪成片。
+- **本地角色动画：** SVG 绑定、姿态库、GSAP 时间线，由 HyperFrames 将卡通角色表演渲染到 `projects/<project-name>/renders/final.mp4`。
+- **实拍素材视频：** 纪实混剪管线从 Archive.org、NASA、Wikimedia Commons 以及 Pexels、Unsplash 等可选免费密钥来源构建可 CLIP 检索的语料库，然后把真实的动态影像剪成成片。
 
-If you want the second one, prompt for a **documentary montage**, **tone poem**, or **stock-footage collage**, and explicitly say **use real footage only**.
-
----
-
-## Try These Prompts
-
-Copy any of these into your AI coding assistant after setup. Each one runs a full production pipeline.
-
-### Start from a reference video
-
-> "Here's a YouTube short I love. Make me something like this, but about CRISPR for high school students."
-
-> "Analyze this Reel and give me 3 original variants I could make for my own product launch."
-
-> "I like the pacing and hook in this video. Keep that energy, but turn it into a 45-second explainer about black holes."
-
-### Zero keys needed
-
-> "Make a 45-second animated explainer about why the sky is blue"
-
-> "Create a 60-second video about the history of the internet, with narration and captions"
-
-> "Make a data-driven explainer about coffee consumption around the world"
-
-### Free real-footage documentary path
-
-> "Make a 90-second documentary montage about what a city feels like at 4am. Use real footage only, no narration, elegiac tone."
-
-> "Create a 60-second Adam-Curtis-style archival collage about 1950s consumer optimism. Prefer Archive.org and Wikimedia footage."
-
-> "Cut together a dreamlike montage about coming home in the rain using real stock footage only. Music yes, narration no."
-
-### With an image/video provider configured (~$0.15–$1.50)
-
-> "Create a 30-second Ghibli-style animated video of a magical floating library in the clouds at golden hour"
-
-> "Make a 30-second anime-style animation of an underwater temple with bioluminescent coral and ancient ruins"
-
-> "Create an animated explainer about how CRISPR gene editing works, using AI-generated visuals"
-
-> "Make a product launch teaser for a fictional smart water bottle called AquaPulse"
-
-### Full setup (~$1–$3)
-
-> "Create a cinematic 30-second trailer for a sci-fi concept: humanity receives a warning from 1000 years in the future"
-
-> "Make a 90-second animated explainer about quantum computing for middle school students, with a fun narrator voice and custom soundtrack"
-
-Want more? See the full **[Prompt Gallery](PROMPT_GALLERY.md)** for tested prompts with expected costs and output examples, or run `make demo` to render zero-key demo videos instantly.
+如果你想要最后一种，在提示词中明确要求 **documentary montage（纪实混剪）**、**tone poem（音诗）** 或 **stock-footage collage（素材拼贴）**，并明确说明 **只用实拍素材**。
 
 ---
 
-## Pipelines
+## 试试这些提示词
 
-Each pipeline is a complete production workflow, from idea to finished video.
+安装完成后，把以下任意一条复制到你的 AI 编程助手中。每一条都会运行一条完整的制作管线。
 
-| Pipeline | What It Produces | Best For |
+### 从参考视频开始
+
+> “这是我很喜欢的一条 YouTube Short。给我做一个类似的，但主题换成面向高中生的 CRISPR。”
+
+> “分析这条 Reel，给我 3 个可以用于我自己产品发布的原创变体。”
+
+> “我喜欢这条视频的节奏和开场钩子。保留这种能量，但把它改成一个 45 秒关于黑洞的讲解视频。”
+
+### 无需任何密钥
+
+> “做一个 45 秒的动画讲解视频，解释天空为什么是蓝色的”
+
+> “制作一个 60 秒关于互联网历史的视频，带旁白和字幕”
+
+> “做一个关于全球咖啡消费情况的数据驱动讲解视频”
+
+### 免费实拍素材纪实路线
+
+> “做一个 90 秒的纪实混剪，主题是凌晨 4 点的城市是什么感觉。只用实拍素材，不要旁白，挽歌般的基调。”
+
+> “制作一个 60 秒 Adam Curtis 风格的档案拼贴，主题是 1950 年代的消费主义乐观情绪。优先使用 Archive.org 和 Wikimedia 的素材。”
+
+> “用真实素材剪辑一段关于雨夜归家的梦幻混剪。要配乐，不要旁白。”
+
+### 配置了图像/视频提供商（约 $0.15–$1.50）
+
+> “制作一个 30 秒吉卜力风格的动画视频：黄金时刻，一座漂浮在云端的魔法图书馆”
+
+> “制作一个 30 秒动漫风格动画：一座水下神庙，有发光的珊瑚和远古遗迹”
+
+> “制作一个关于 CRISPR 基因编辑原理的动画讲解视频，使用 AI 生成的画面”
+
+> “为一款名为 AquaPulse 的虚构智能水杯制作产品发布先导片”
+
+### 完整配置（约 $1–$3）
+
+> “制作一个 30 秒电影感科幻预告片：人类收到来自 1000 年后的警告”
+
+> “制作一个 90 秒面向中学生的量子计算动画讲解视频，配有趣的解说嗓音和定制配乐”
+
+想要更多？查看完整的 **[提示词画廊](PROMPT_GALLERY.md)**，里面有经过测试的提示词、预期成本和输出示例；或者运行 `make demo` 立即渲染零密钥演示视频。
+
+---
+
+## 管线
+
+每条管线都是一套完整的制作工作流，从创意到成片。
+
+| 管线 | 产出内容 | 适用场景 |
 |----------|-----------------|----------|
-| **Animated Explainer** | AI-generated explainer with research, narration, visuals, music | Educational content, tutorials, topic breakdowns |
-| **Animation** | Motion graphics, kinetic typography, animated sequences | Social media, product demos, abstract concepts |
-| **Avatar Spokesperson** | Avatar-driven presenter videos | Corporate comms, training, announcements |
-| **Cinematic** | Trailer, teaser, and mood-driven edits | Brand films, teasers, promotional content |
-| **Clip Factory** | Batch of ranked short-form clips from one long source | Repurposing long content for social media |
-| **Documentary Montage** | Thematic montage cut from a CLIP-indexed corpus of free stock footage and open archives (Pexels, Archive.org, NASA, Wikimedia, Unsplash) | Video essays, mood pieces, retrieval-first B-roll edits, real-footage videos without paid generation APIs |
-| **Hybrid** | Source footage + AI-generated support visuals | Enhancing existing footage with graphics |
-| **Localization & Dub** | Subtitle, dub, and translate existing video | Multi-language distribution |
-| **Podcast Repurpose** | Podcast highlights to video | Podcast marketing, audiogram videos |
-| **Screen Demo** | Polished software screen recordings and walkthroughs | Product demos, tutorials, documentation |
-| **Talking Head** | Footage-led speaker videos | Presentations, vlogs, interviews |
+| **Animated Explainer（动画讲解）** | 带调研、旁白、画面和配乐的 AI 生成讲解视频 | 教育内容、教程、知识拆解 |
+| **Animation（动画）** | 动态图形、动态字体排版、动画序列 | 社交媒体、产品演示、抽象概念 |
+| **Avatar Spokesperson（数字人代言）** | 数字人主持人口播视频 | 企业沟通、培训、公告 |
+| **Cinematic（电影感）** | 预告片、先导片和情绪驱动的剪辑 | 品牌影片、先导片、宣传内容 |
+| **Clip Factory（片段工厂）** | 从一条长素材批量产出排序后的短视频 | 长内容二次分发到社交媒体 |
+| **Documentary Montage（纪实混剪）** | 从 CLIP 索引的免费素材库与开放档案（Pexels、Archive.org、NASA、Wikimedia、Unsplash）语料中剪辑的主题混剪 | 视频散文、情绪短片、检索优先的 B-roll 剪辑、无需付费生成 API 的实拍素材视频 |
+| **Hybrid（混合）** | 源素材 + AI 生成辅助画面 | 用图形增强现有素材 |
+| **Localization & Dub（本地化与配音）** | 为现有视频加字幕、配音和翻译 | 多语言分发 |
+| **Podcast Repurpose（播客再利用）** | 播客高光片段转视频 | 播客营销、音频可视化视频 |
+| **Screen Demo（录屏演示）** | 精修的软件录屏与操作演示 | 产品演示、教程、文档 |
+| **Talking Head（口播）** | 以实拍素材为主的演讲者视频 | 演讲、vlog、采访 |
 
-Every pipeline follows the same structured flow:
+每条管线都遵循相同的结构化流程：
 
 ```
 research -> proposal -> script -> scene_plan -> assets -> edit -> compose
 ```
 
-Each stage has a dedicated **director skill** — a markdown instruction file that teaches the agent exactly how to execute that stage. The agent reads the skill, uses the tools, self-reviews, checkpoints state, and asks for human approval at creative decision points.
+每个阶段都有一个专门的**导演技能**——一份 Markdown 指令文件，精确教智能体如何执行该阶段。智能体读取技能、调用工具、自我评审、将状态写入检查点，并在创意决策点请求人工批准。
 
-> **Web research is a first-class stage.** Before writing a single word of script, the agent searches YouTube, Reddit, Hacker News, news sites, and academic sources. It gathers data points, audience questions, trending angles, and visual references — then cites everything in a structured research brief. Your videos are grounded in real, current information, not hallucinated facts.
-
----
-
-## Why OpenMontage?
-
-Most AI video tools give you a single clip from a prompt. OpenMontage gives you an **end-to-end production pipeline** — the same structured process a real production team follows, automated by your AI agent.
-
-Most "free AI video" stacks quietly mean "animate still images." OpenMontage can do that too, but it can also build a finished video from **real footage** pulled from free/open sources, ranked semantically, edited intentionally, and rendered as a proper timeline.
-
-Edit your own talking-head footage. Generate a fully animated explainer from scratch. Cut a 2-hour podcast into a dozen social clips. Translate and dub your content into 10 languages. Build a cinematic brand teaser from stock footage and AI-generated scenes. **If a production team can make it, OpenMontage can orchestrate it.**
-
-- **12 production pipelines** — explainers, talking heads, screen demos, cinematic trailers, animations, podcasts, localization, documentary montages, and more
-- **100+ production tools** — spanning video generation, image creation, text-to-speech, music, audio mixing, subtitles, enhancement, and analysis
-- **700+ agent skill and production-knowledge files** — pipeline directors, creative techniques, quality checklists, and deep technology knowledge packs that teach the agent how to use every tool like an expert
-- **Reference-driven creation** — paste a video you like and the agent turns it into a grounded, differentiated production plan instead of forcing you to invent the perfect prompt from scratch
-- **Real-footage documentary creation without paid video models** — build actual edited videos from free/open motion footage and archival sources, not just Ken Burns over images
-- **Live web research built in** — before writing a single word of script, the agent runs 15-25+ web searches across YouTube, Reddit, news sites, and academic sources to ground your video in real, current data
-- **Both free/local AND cloud providers** — every capability supports open-source local alternatives alongside premium APIs. Use what you have.
-- **No vendor lock-in** — swap providers freely. The scored selector ranks every provider across 7 dimensions (task fit, output quality, control, reliability, cost efficiency, latency, continuity) and picks the best match automatically.
-- **Production-grade quality gates** — delivery promise enforcement blocks slideshow-looking renders, pre-compose validation catches broken plans before wasting GPU time, and mandatory post-render self-review (ffprobe + frame extraction + audio analysis) ensures the agent never presents garbage. Every provider choice, style decision, and fallback gets logged in an auditable decision trail.
-- **Budget governance built in** — cost estimation before execution, spend caps, per-action approval thresholds. No surprise bills.
+> **网络调研是一等公民阶段。** 在撰写脚本的第一个字之前，智能体会搜索 YouTube、Reddit、Hacker News、新闻网站和学术来源，收集数据点、观众疑问、热门角度和视觉参考——然后把所有内容引用进一份结构化的调研简报。你的视频立足于真实、当前的信息，而不是幻觉出来的事实。
 
 ---
 
-## How It Works
+## 为什么选择 OpenMontage？
 
-OpenMontage uses an **agent-first architecture**. There is no code orchestrator. Your AI coding assistant IS the orchestrator.
+大多数 AI 视频工具只能根据提示词生成单个片段。OpenMontage 给你的是一条**端到端制作管线**——与真实制作团队相同的结构化流程，由你的 AI 智能体自动执行。
+
+大多数“免费 AI 视频”方案实际上悄悄指的是“让静态图片动起来”。OpenMontage 也能做到那点，但它还可以用从免费/开放来源获取的**实拍素材**构建成片：语义化排序、有目的地剪辑、以完整时间线渲染。
+
+剪辑你自己的口播素材。从零生成全动画讲解视频。把 2 小时的播客切成一打社交短视频。把你的内容翻译配音成 10 种语言。用素材库影像和 AI 生成场景制作电影感的品牌先导片。**只要制作团队能做出来，OpenMontage 就能编排出来。**
+
+- **12 条制作管线**——讲解视频、口播、录屏演示、电影感预告片、动画、播客、本地化、纪实混剪等
+- **100+ 制作工具**——覆盖视频生成、图像创作、文本转语音、音乐、混音、字幕、增强与分析
+- **700+ 智能体技能与制作知识文件**——管线导演、创意技巧、质量检查清单，以及深度技术知识包，教会智能体像专家一样使用每个工具
+- **参考驱动的创作**——粘贴一条你喜欢的视频，智能体会把它转化为有据可依、差异化的制作方案，而不是逼你从零凭空想出完美的提示词
+- **无需付费视频模型的实拍素材纪实创作**——用免费/开放的动态影像和档案来源构建真正剪辑过的视频，而不仅仅是在图片上做 Ken Burns 效果
+- **内置实时网络调研**——在撰写脚本的第一个字之前，智能体会在 YouTube、Reddit、新闻网站和学术来源上执行 15-25+ 次网络搜索，让你的视频立足于真实、当前的数据
+- **免费/本地与云端提供商并存**——每项能力都同时支持开源本地替代方案和付费 API。有什么用什么。
+- **无厂商锁定**——随意更换提供商。评分选择器会跨 7 个维度（任务适配、输出质量、控制力、可靠性、成本效率、延迟、连续性）对每个提供商排名，并自动选出最佳匹配。
+- **生产级质量关卡**——交付承诺强制机制会拦截看起来像幻灯片的渲染；预合成校验在浪费 GPU 时间之前抓出坏方案；强制性的渲染后自审（ffprobe + 抽帧 + 音频分析）确保智能体永远不会把垃圾交给你。每个提供商选择、风格决策和降级回退都会记录进可审计的决策轨迹。
+- **内置预算治理**——执行前估算成本、支出上限、单动作审批阈值。不会有意外账单。
+
+---
+
+## 工作原理
+
+OpenMontage 采用**智能体优先架构**。没有代码编排器，你的 AI 编程助手本身就是编排器。
 
 ```
-You: "Make an explainer video about how black holes form"
+你：“制作一个关于黑洞如何形成的讲解视频”
  |
  v
-Agent reads pipeline manifest (YAML) -- stages, tools, review criteria, success gates
+智能体读取管线清单（YAML）——阶段、工具、评审标准、成功门槛
  |
  v
-Agent reads stage director skill (Markdown) -- HOW to execute each stage
+智能体读取阶段导演技能（Markdown）——每个阶段该如何执行
  |
  v
-Agent calls Python tools -- scored provider selection ranks every tool across 7 dimensions
+智能体调用 Python 工具——评分制提供商选择跨 7 个维度对每个工具排名
  |
  v
-Agent self-reviews using reviewer skill -- schema validation, playbook compliance, quality checks
+智能体使用评审技能进行自审——schema 校验、风格手册合规、质量检查
  |
  v
-Agent checkpoints state (JSON) -- resumable, with decision log and cost snapshot
+智能体将状态写入检查点（JSON）——可恢复，附决策日志与成本快照
  |
  v
-Agent presents for your approval -- you stay in control at every creative decision
+智能体提交给你审批——每个创意决策点都由你掌控
  |
  v
-Pre-compose validation gate -- delivery promise, slideshow risk, renderer governance
+预合成校验关卡——交付承诺、幻灯片风险、渲染器治理
  |
  v
-Render (Remotion or FFmpeg) -- composition engine matched to visual grammar
+渲染（Remotion 或 FFmpeg）——根据视觉语法匹配合成引擎
  |
  v
-Post-render self-review -- ffprobe, frame extraction, audio analysis, promise verification
+渲染后自审——ffprobe、抽帧、音频分析、承诺核验
  |
  v
-Final video output -- only if self-review passes
+最终视频输出——只有通过自审才会交付
 ```
 
-**Python provides tools and persistence.** All creative decisions, orchestration logic, review criteria, and quality standards live in readable instruction files (YAML manifests + Markdown skills) that you can inspect and customize. Every decision is logged with alternatives considered, confidence scores, and the reasoning behind each choice.
+**Python 提供工具与持久化。** 所有创意决策、编排逻辑、评审标准和质量要求都存放在可读的指令文件（YAML 清单 + Markdown 技能）中，你可以查看和定制。每个决策都会连同考虑过的备选方案、置信度评分和背后的推理一起记录。
 
 ---
 
-## Architecture
+## 架构
 
 ```
 OpenMontage/
-├── tools/              # 100+ Python tools (the agent's hands)
-│   ├── video/          # 13 video gen tools + compose, stitch, trim
-│   ├── audio/          # 4 TTS providers + Suno/ElevenLabs music, mixing, enhancement
-│   ├── graphics/       # 9 image/graphics generation tools + diagrams, code snippets, math
-│   ├── enhancement/    # Upscale, bg remove, face enhance, color grade
-│   ├── analysis/       # Transcription, scene detect, frame sampling
-│   ├── avatar/         # Talking head, lip sync
-│   └── subtitle/       # SRT/VTT generation
+├── tools/              # 100+ 个 Python 工具（智能体的双手）
+│   ├── video/          # 13 个视频生成工具 + 合成、拼接、裁剪
+│   ├── audio/          # 4 个 TTS 提供商 + Suno/ElevenLabs 音乐、混音、增强
+│   ├── graphics/       # 9 个图像/图形生成工具 + 图表、代码片段、数学动画
+│   ├── enhancement/    # 超分、背景移除、人脸增强、调色
+│   ├── analysis/       # 转写、场景检测、抽帧
+│   ├── avatar/         # 数字人口播、唇形同步
+│   └── subtitle/       # SRT/VTT 字幕生成
 │
-├── pipeline_defs/      # YAML pipeline manifests (the agent's playbook)
-├── skills/             # Markdown skill files (the agent's knowledge)
-│   ├── pipelines/      # Per-pipeline stage director skills
-│   ├── creative/       # Creative technique skills
-│   ├── core/           # Core tool skills
-│   └── meta/           # Reviewer, checkpoint protocol
+├── pipeline_defs/      # YAML 管线清单（智能体的行动手册）
+├── skills/             # Markdown 技能文件（智能体的知识库）
+│   ├── pipelines/      # 各管线的阶段导演技能
+│   ├── creative/       # 创意技巧技能
+│   ├── core/           # 核心工具技能
+│   └── meta/           # 评审、检查点协议
 │
-├── schemas/            # 15 JSON Schemas (contract validation)
-├── styles/             # Visual style playbooks (YAML)
-├── remotion-composer/  # React/Remotion video composition engine
-├── lib/                # Core infrastructure (config, checkpoints, pipeline loader)
-└── tests/              # Contract tests, QA integration tests, eval harness
+├── schemas/            # 15 个 JSON Schema（契约校验）
+├── styles/             # 视觉风格手册（YAML）
+├── remotion-composer/  # React/Remotion 视频合成引擎
+├── lib/                # 核心基础设施（配置、检查点、管线加载器）
+└── tests/              # 契约测试、QA 集成测试、评估框架
 ```
 
-### Three-Layer Knowledge Architecture
+### 三层知识架构
 
 ```
-Layer 1: tools/ + pipeline_defs/     "What exists" — executable capabilities + orchestration
-Layer 2: skills/                     "How to use it" — OpenMontage conventions and quality bars
-Layer 3: .agents/skills/             "How it works" — external technology knowledge packs
+第 1 层：tools/ + pipeline_defs/     “有什么”——可执行能力 + 编排
+第 2 层：skills/                     “怎么用”——OpenMontage 的规范与质量标准
+第 3 层：.agents/skills/             “原理是什么”——外部技术知识包
 ```
 
-Each tool declares which Layer 3 skills it relies on. The agent reads Layer 1 to know what's available, Layer 2 to know how OpenMontage wants it used, and Layer 3 for deep technical knowledge when needed.
+每个工具都会声明它依赖哪些第 3 层技能。智能体读第 1 层了解有什么可用，读第 2 层了解 OpenMontage 希望如何使用，需要深入技术细节时读第 3 层。
 
 ---
 
-## Supported Providers
+## 支持的服务提供商
 
-> **Full setup guide with pricing and free tiers:** [`docs/PROVIDERS.md`](docs/PROVIDERS.md)
+> **含价格与免费额度的完整配置指南：** [`docs/PROVIDERS.md`](docs/PROVIDERS.md)
 
 <details>
-<summary><strong>Video Generation — 15 providers</strong></summary>
+<summary><strong>视频生成 —— 15 个提供商</strong></summary>
 
-| Provider | Type | Notes |
+| 提供商 | 类型 | 说明 |
 |----------|------|-------|
-| **Kling (fal.ai)** | Cloud API | High quality, fast via fal.ai gateway |
-| **Kling Official** | Cloud API | Official direct API with separate `kling_official` provider |
-| **Runway Gen-4** | Cloud API | Cinematic quality, Gen-3 Alpha Turbo / Gen-4 Turbo / Gen-4 Aleph |
-| **Google Veo 3** | Cloud API | Long-form, cinematic. Via fal.ai or HeyGen. |
-| **Grok Imagine Video** | Cloud API | Strong reference-image video and xAI-native short-form generation |
-| **Higgsfield** | Cloud API | Multi-model orchestrator with Soul ID for character consistency |
-| **MiniMax** | Cloud API | Cost-effective |
-| **HeyGen** | Cloud API | Multi-model gateway |
-| **WAN 2.1** | Local GPU | Free, 1.3B and 14B variants |
-| **Hunyuan** | Local GPU | Free, high quality |
-| **CogVideo** | Local GPU | Free, 2B and 5B variants |
-| **LTX-Video** | Local GPU / Modal | Free locally, or self-hosted cloud |
-| **Pexels** | Stock | Free stock footage |
-| **Pixabay** | Stock | Free stock footage |
-| **Wikimedia Commons** | Stock | Free/open stock footage and archival video |
+| **Kling (fal.ai)** | 云端 API | 高质量，经 fal.ai 网关，速度快 |
+| **Kling Official** | 云端 API | 官方直连 API，独立的 `kling_official` 提供商 |
+| **Runway Gen-4** | 云端 API | 电影级质量，Gen-3 Alpha Turbo / Gen-4 Turbo / Gen-4 Aleph |
+| **Google Veo 3** | 云端 API | 长视频、电影感。通过 fal.ai 或 HeyGen 使用。 |
+| **Grok Imagine Video** | 云端 API | 强大的参考图视频能力和 xAI 原生短视频生成 |
+| **Higgsfield** | 云端 API | 多模型编排器，Soul ID 保证角色一致性 |
+| **MiniMax** | 云端 API | 高性价比 |
+| **HeyGen** | 云端 API | 多模型网关 |
+| **WAN 2.1** | 本地 GPU | 免费，1.3B 和 14B 两个变体 |
+| **Hunyuan** | 本地 GPU | 免费，高质量 |
+| **CogVideo** | 本地 GPU | 免费，2B 和 5B 两个变体 |
+| **LTX-Video** | 本地 GPU / Modal | 本地免费，或自托管云端 |
+| **Pexels** | 素材库 | 免费素材影像 |
+| **Pixabay** | 素材库 | 免费素材影像 |
+| **Wikimedia Commons** | 素材库 | 免费/开放的素材影像和档案视频 |
 
 </details>
 
 <details>
-<summary><strong>Image Generation — 11 tools/providers</strong></summary>
+<summary><strong>图像生成 —— 11 个工具/提供商</strong></summary>
 
-| Provider | Type | Notes |
+| 提供商 | 类型 | 说明 |
 |----------|------|-------|
-| **FLUX** | Cloud API | State-of-the-art quality |
-| **Google Imagen** | Cloud API | Imagen 4 — high-quality, multiple aspect ratios |
-| **Grok Imagine Image** | Cloud API | Strong image edits, style transfer, and multi-image compositing |
-| **GPT Image 2** | Cloud API | OpenAI's image model |
-| **Recraft** | Cloud API | Design-focused generation |
-| **Kling Official** | Cloud API | Official direct API for Kling image generation and reference workflows |
-| **Local Diffusion** | Local GPU | Stable Diffusion, free |
-| **Pexels** | Stock | Free stock images |
-| **Pixabay** | Stock | Free stock images |
-| **Unsplash** | Stock | Free stock images |
-| **ManimCE** | Local | Mathematical animations |
+| **FLUX** | 云端 API | 业界顶尖质量 |
+| **Google Imagen** | 云端 API | Imagen 4——高质量，多种宽高比 |
+| **Grok Imagine Image** | 云端 API | 强大的图像编辑、风格迁移和多图合成 |
+| **GPT Image 2** | 云端 API | OpenAI 的图像模型 |
+| **Recraft** | 云端 API | 面向设计的生成 |
+| **Kling Official** | 云端 API | Kling 图像生成与参考工作流的官方直连 API |
+| **Local Diffusion** | 本地 GPU | Stable Diffusion，免费 |
+| **Pexels** | 素材库 | 免费素材图片 |
+| **Pixabay** | 素材库 | 免费素材图片 |
+| **Unsplash** | 素材库 | 免费素材图片 |
+| **ManimCE** | 本地 | 数学动画 |
 
 </details>
 
 <details>
-<summary><strong>Text-to-Speech — 5 providers</strong></summary>
+<summary><strong>文本转语音 —— 5 个提供商</strong></summary>
 
-| Provider | Type | Notes |
+| 提供商 | 类型 | 说明 |
 |----------|------|-------|
-| **ElevenLabs** | Cloud API | Premium voice quality |
-| **Google TTS** | Cloud API | 700+ voices, 50+ languages — best for localization |
-| **Kling Official TTS** | Cloud API | Official Kling narration when a `voice_id` is known |
-| **OpenAI TTS** | Cloud API | Fast, affordable |
-| **Piper** | Local | Completely free, offline |
+| **ElevenLabs** | 云端 API | 顶级语音质量 |
+| **Google TTS** | 云端 API | 700+ 声音、50+ 语言——最适合本地化 |
+| **Kling Official TTS** | 云端 API | 已知 `voice_id` 时可用的 Kling 官方配音 |
+| **OpenAI TTS** | 云端 API | 快速、便宜 |
+| **Piper** | 本地 | 完全免费、离线可用 |
 
 </details>
 
 <details>
-<summary><strong>Music, Sound & Post-Production</strong></summary>
+<summary><strong>音乐、音效与后期制作</strong></summary>
 
-**Music & Sound:**
+**音乐与音效：**
 
-| Provider | Type | Notes |
+| 提供商 | 类型 | 说明 |
 |----------|------|-------|
-| **Suno AI** | Cloud API | Full song generation with vocals, lyrics, any genre. Up to 8 minutes. |
-| **ElevenLabs Music** | Cloud API | AI music generation |
-| **ElevenLabs SFX** | Cloud API | Sound effect generation |
+| **Suno AI** | 云端 API | 带人声、歌词的完整歌曲生成，任意曲风，最长 8 分钟。 |
+| **ElevenLabs Music** | 云端 API | AI 音乐生成 |
+| **ElevenLabs SFX** | 云端 API | 音效生成 |
 
-**Post-Production (always available, always free):**
+**后期制作（始终可用、始终免费）：**
 
-| Tool | What It Does |
+| 工具 | 作用 |
 |------|-------------|
-| **FFmpeg** | Video composition, encoding, subtitle burn-in, audio muxing |
-| **Video Stitch** | Multi-clip assembly, crossfades, picture-in-picture, spatial layouts |
-| **Video Trimmer** | Precision cutting and extraction |
-| **Audio Mixer** | Multi-track mixing, ducking, fades |
-| **Audio Enhance** | Noise reduction, normalization |
-| **Color Grade** | LUT-based color grading |
-| **Subtitle Gen** | SRT/VTT generation from timestamps |
+| **FFmpeg** | 视频合成、编码、字幕烧录、音频混流 |
+| **Video Stitch** | 多片段组装、交叉淡化、画中画、空间布局 |
+| **Video Trimmer** | 精确剪切与提取 |
+| **Audio Mixer** | 多轨混音、闪避（ducking）、淡入淡出 |
+| **Audio Enhance** | 降噪、响度归一化 |
+| **Color Grade** | 基于 LUT 的调色 |
+| **Subtitle Gen** | 根据时间戳生成 SRT/VTT 字幕 |
 
-**Enhancement:**
+**增强：**
 
-| Tool | What It Does |
+| 工具 | 作用 |
 |------|-------------|
-| **Upscale** | Real-ESRGAN image/video upscaling |
-| **Background Remove** | rembg / U2Net background removal |
-| **Face Enhance** | Face quality enhancement |
-| **Face Restore** | CodeFormer / GFPGAN face restoration |
+| **Upscale** | Real-ESRGAN 图像/视频超分辨率 |
+| **Background Remove** | rembg / U2Net 背景移除 |
+| **Face Enhance** | 人脸质量增强 |
+| **Face Restore** | CodeFormer / GFPGAN 人脸修复 |
 
-**Analysis:**
+**分析：**
 
-| Tool | What It Does |
+| 工具 | 作用 |
 |------|-------------|
-| **Transcriber** | WhisperX speech-to-text with word-level timestamps |
-| **Scene Detect** | Automatic scene boundary detection |
-| **Frame Sampler** | Intelligent frame extraction |
-| **Video Understand** | CLIP/BLIP-2 vision-language analysis |
+| **Transcriber** | WhisperX 语音转文字，带逐词时间戳 |
+| **Scene Detect** | 自动场景边界检测 |
+| **Frame Sampler** | 智能抽帧 |
+| **Video Understand** | CLIP/BLIP-2 视觉语言分析 |
 
-**Avatar & Lip Sync:**
+**数字人与唇形同步：**
 
-| Tool | What It Does |
+| 工具 | 作用 |
 |------|-------------|
-| **Talking Head** | SadTalker / MuseTalk avatar animation |
-| **Lip Sync** | Wav2Lip audio-driven lip synchronization |
-| **Kling Avatar** | Official Kling cloud avatar presenter generation |
-| **Kling Lip Sync** | Official Kling cloud lip-sync with explicit face selection |
+| **Talking Head** | SadTalker / MuseTalk 数字人动画 |
+| **Lip Sync** | Wav2Lip 音频驱动唇形同步 |
+| **Kling Avatar** | Kling 官方云端数字人主持生成 |
+| **Kling Lip Sync** | Kling 官方云端唇形同步，支持显式人脸选择 |
 
-**Composition & Rendering:**
+**合成与渲染：**
 
-| Engine | Type | What It Does |
+| 引擎 | 类型 | 作用 |
 |--------|------|-------------|
-| **Remotion** | Local (Node.js) | React-based programmatic video — spring-animated image scenes, stat reveals, section titles, hero cards, TikTok-style word-by-word captions, scene transitions (fade/slide/wipe/flip), Google Fonts, audio with fade curves, and the TalkingHead avatar composition. **When no video generation providers are configured, the agent generates still images and Remotion turns them into fully animated video.** |
-| **HyperFrames** | Local (Node.js ≥ 22) | HTML/CSS/GSAP programmatic video — kinetic typography, product promos, launch reels, custom motion graphics, registry blocks (data charts, grain overlays, shader transitions), website-to-video workflows, and rigged SVG character animation. Consumed via `npx hyperframes`; no monorepo checkout needed. |
-| **FFmpeg** | Local | Core video assembly, encoding, subtitle burn, audio muxing, color grading |
+| **Remotion** | 本地（Node.js） | 基于 React 的编程化视频——弹簧动画图像场景、数据揭示、章节标题、主视觉卡片、TikTok 风格逐词字幕、场景转场（淡入/滑动/擦除/翻转）、Google Fonts、带淡入淡出曲线的音频，以及 TalkingHead 数字人合成。**当没有配置任何视频生成提供商时，智能体会生成静态图像，由 Remotion 把它们变成完整的动画视频。** |
+| **HyperFrames** | 本地（Node.js ≥ 22） | HTML/CSS/GSAP 编程化视频——动态字体排版、产品宣传片、发布集锦、自定义动态图形、注册表积木（数据图表、颗粒叠加、着色器转场）、网页转视频工作流，以及绑定好的 SVG 角色动画。通过 `npx hyperframes` 调用；无需 monorepo 检出。 |
+| **FFmpeg** | 本地 | 核心视频组装、编码、字幕烧录、音频混流、调色 |
 
-Runtime is chosen at proposal (`render_runtime`) and locked through `edit_decisions`. Silent swaps between runtimes are a governance violation — see `skills/core/hyperframes.md`.
+运行时在提案阶段选定（`render_runtime`），并在 `edit_decisions` 中锁定。在运行时之间悄悄切换属于治理违规——见 `skills/core/hyperframes.md`。
 
 </details>
 
 ---
 
-## Style System
+## 风格系统
 
-Style playbooks define the visual language for your productions:
+风格手册（playbook）为你的制作定义视觉语言：
 
-| Playbook | Best For |
+| 风格手册 | 适用场景 |
 |----------|----------|
-| **Clean Professional** | Corporate, educational, SaaS |
-| **Flat Motion Graphics** | Social media, TikTok, startups |
-| **Minimalist Diagram** | Technical deep-dives, architecture |
+| **Clean Professional（简洁专业）** | 企业、教育、SaaS |
+| **Flat Motion Graphics（扁平动态图形）** | 社交媒体、TikTok、初创团队 |
+| **Minimalist Diagram（极简图示）** | 技术深度解析、架构讲解 |
 
-Playbooks control typography, color palettes, motion styles, audio profiles, and quality rules. The agent reads the playbook and applies it consistently across all generated assets.
+风格手册控制字体排版、调色板、动效风格、音频配置和质量规则。智能体读取手册后会在所有生成的资产中一致地应用它。
 
 ---
 
-## Platform Output Profiles
+## 平台输出配置
 
-Built-in render profiles for every major platform:
+内置覆盖所有主流平台的渲染配置：
 
-| Profile | Resolution | Aspect Ratio |
+| 配置 | 分辨率 | 宽高比 |
 |---------|-----------|--------------|
-| YouTube Landscape | 1920x1080 | 16:9 |
+| YouTube 横屏 | 1920x1080 | 16:9 |
 | YouTube 4K | 3840x2160 | 16:9 |
 | YouTube Shorts | 1080x1920 | 9:16 |
 | Instagram Reels | 1080x1920 | 9:16 |
-| Instagram Feed | 1080x1080 | 1:1 |
+| Instagram 信息流 | 1080x1080 | 1:1 |
 | TikTok | 1080x1920 | 9:16 |
 | LinkedIn | 1920x1080 | 16:9 |
-| Cinematic | 2560x1080 | 21:9 |
+| 电影宽银幕 | 2560x1080 | 21:9 |
 
 ---
 
-## Production Governance
+## 制作治理
 
-OpenMontage treats video production like real engineering — with quality gates, audit trails, and enforcement at every stage.
+OpenMontage 把视频制作当作真正的工程对待——每个阶段都有质量关卡、审计轨迹和强制机制。
 
-### Quality Gates
+### 质量关卡
 
-- **Human approval gates are enforced, not suggested** — proposal, script, scene plan, generated assets, and publish all pause for your sign-off. The checkpoint writer rejects a "completed" gated stage without recorded approval, and every superseded checkpoint is archived so the audit trail (including gate transitions) survives revisions. Review happens visually on the [Backlot board](#watch-it-happen--the-backlot-living-storyboard).
-- **Pre-compose validation** — blocks render if the delivery promise is violated (e.g. "motion-led" video with 80% still images), slideshow risk score is critical, or renderer family is missing. Catches broken plans before wasting GPU time.
-- **Post-render self-review** — after every render, the runtime runs ffprobe validation, extracts frames at 4 positions to check for black frames and broken overlays, analyzes audio levels for silence and clipping, verifies the delivery promise was honored, and checks subtitle presence. If the review fails, the video is not presented.
-- **Slideshow risk scoring** — 6-dimension analysis (repetition, decorative visuals, weak motion, shot intent, typography overreliance, unsupported cinematic claims) prevents "animated PowerPoint" outputs.
-- **Source media inspection** — when users supply their own footage, the system probes every file (resolution, codec, audio channels, duration) and builds planning implications before a single creative decision is made. No hallucinating content from filenames.
+- **人工审批关卡是强制的，而不是建议性的**——提案、脚本、场景规划、生成的资产和发布都会暂停等待你的签字确认。检查点写入器会拒绝把没有记录审批的门禁阶段标记为“已完成”，并且每个被取代的检查点都会归档，确保审计轨迹（包括关卡流转）在修订后依然完整。评审在 [Backlot 看板](#实时观看制作过程--backlot-动态故事板)上以可视化方式进行。
+- **预合成校验**——如果违反交付承诺（例如“以动态画面为主”的视频却有 80% 静态图像）、幻灯片风险评分达到临界值，或缺少渲染器家族，则阻止渲染。在浪费 GPU 时间之前抓出坏方案。
+- **渲染后自审**——每次渲染后，运行时会执行 ffprobe 校验，在 4 个位置抽帧检查黑帧和损坏的叠加层，分析音频电平是否静音或削波，核验交付承诺是否兑现，并检查字幕是否存在。评审不通过，视频就不会交付给你。
+- **幻灯片风险评分**——6 维分析（重复度、装饰性画面、弱动态、镜头意图、排版依赖、无支撑的电影感宣称）防止产出“会动的 PPT”。
+- **源素材检查**——当用户提供自己的素材时，系统会探测每个文件（分辨率、编码、音轨、时长），并在做出任何创意决策之前生成规划含义。绝不根据文件名臆想内容。
 
-### Scored Provider Selection
+### 评分制提供商选择
 
-Every tool selection (video generation, image generation, TTS, music) runs through a 7-dimension scoring engine: task fit (30%), output quality (20%), control features (15%), reliability (15%), cost efficiency (10%), latency (5%), continuity (5%). The winning provider and its score are logged in the decision trail with all alternatives considered.
+每次工具选择（视频生成、图像生成、TTS、音乐）都会经过 7 维评分引擎：任务适配（30%）、输出质量（20%）、控制特性（15%）、可靠性（15%）、成本效率（10%）、延迟（5%）、连续性（5%）。获胜的提供商及其分数会与所有考虑过的备选方案一起记录在决策轨迹中。
 
-Selectors normalize loose brief context before scoring. If the agent only knows something like "Pixar-style animated short with character consistency," the selector expands that into scorer-friendly intent and style signals instead of requiring a perfectly pre-shaped `task_context`.
+选择器会在评分前对松散的 brief 上下文做归一化。如果智能体只知道“皮克斯风格动画短片、角色一致”之类的信息，选择器会把它扩展成评分器友好的意图和风格信号，而不是要求一个完美预塑形的 `task_context`。
 
-Selector outputs also surface the chosen provider's `agent_skills`, so the agent can immediately read the right Layer 3 provider skill before writing prompts.
+选择器的输出还会给出所选提供商的 `agent_skills`，智能体可以立即读取对应的第 3 层提供商技能，然后再去写提示词。
 
-### Decision Audit Trail
+### 决策审计轨迹
 
-Every major creative and technical choice — provider selection, style/playbook choice, music track, voice selection, renderer family, any fallback or downgrade — is logged with alternatives considered, confidence scores, and reasoning. The cumulative decision log persists across all stages so you can trace exactly why the output looks the way it does.
+每个重要的创意和技术决策——提供商选择、风格/手册选择、音乐曲目、声音选择、渲染器家族、任何回退或降级——都会连同考虑过的备选方案、置信度评分和推理一起记录。累积的决策日志贯穿所有阶段，因此你可以精确追溯成片为什么是现在这个样子。
 
-### Budget Controls
+### 预算控制
 
-- **Estimate** before execution — see what it will cost
-- **Reserve** budget — lock funds before the call
-- **Reconcile** after — record actual spend
-- **Configurable modes** — `observe` (track only), `warn` (log overruns), `cap` (hard limit)
-- **Per-action approval** — pause for confirmation above a threshold (default: $0.50)
-- **Total budget cap** — default $10, fully configurable
+- 执行前**估算**——提前看到成本
+- **预留**预算——调用前锁定资金
+- 事后**对账**——记录实际支出
+- **可配置模式**——`observe`（仅记录）、`warn`（记录超限）、`cap`（硬上限）
+- **单动作审批**——超过阈值时暂停等待确认（默认：$0.50）
+- **总预算上限**——默认 $10，完全可配置
 
-No surprise bills. The agent tells you what it will cost before it spends.
+不会有意外账单。智能体在花钱之前会告诉你要花多少。
 
 ---
 
-## Agent Compatibility
+## 智能体兼容性
 
-OpenMontage works with any AI coding assistant that can read files and execute Python. Dedicated instruction files are included for:
+OpenMontage 适用于任何能读文件、能执行 Python 的 AI 编程助手。已为以下平台内置专用指令文件：
 
-| Platform | Config File |
+| 平台 | 配置文件 |
 |----------|------------|
 | **Claude Code** | `CLAUDE.md` |
 | **Cursor** | `CURSOR.md` + `.cursor/rules/` |
@@ -676,83 +676,83 @@ OpenMontage works with any AI coding assistant that can read files and execute P
 | **Codex** | `CODEX.md` |
 | **Windsurf** | `.windsurfrules` |
 
-All platform files point to the shared `AGENT_GUIDE.md` (operating guide and agent contract) and `PROJECT_CONTEXT.md` (architecture reference).
+所有平台文件都指向共享的 `AGENT_GUIDE.md`（操作指南与智能体契约）和 `PROJECT_CONTEXT.md`（架构参考）。
 
-> **Coming soon:** Local LLM support via **Ollama** and **LM Studio** — run the full production pipeline without any cloud LLM.
-
----
-
-## Contributing
-
-OpenMontage is built to be extended. The two most common contributions:
-
-### Adding a New Tool
-
-1. Create a Python file in the appropriate `tools/` subdirectory
-2. Inherit from `BaseTool` and implement the tool contract
-3. The registry auto-discovers it — no manual registration needed
-4. Add a skill file if the tool needs usage guidance
-
-### Adding a New Pipeline
-
-1. Create a YAML manifest in `pipeline_defs/`
-2. Create stage director skills in `skills/pipelines/<your-pipeline>/`
-3. Reference existing tools — or add new ones if needed
-
-See `docs/ARCHITECTURE.md` for the full technical reference, `docs/PROVIDERS.md` for the complete provider guide (setup, pricing, free tiers), and `AGENT_GUIDE.md` for the agent contract.
-
-### Join the Community
-
-We use [GitHub Discussions](https://github.com/calesthio/OpenMontage/discussions) to share work and ideas:
-
-- **[Show and Tell](https://github.com/calesthio/OpenMontage/discussions/categories/show-and-tell)** — Share videos you've made, prompts that worked well, or creative workflows you've discovered
-- **[Ideas](https://github.com/calesthio/OpenMontage/discussions/categories/ideas)** — Suggest new pipelines, tools, style playbooks, or integrations
-- **[Q&A](https://github.com/calesthio/OpenMontage/discussions/categories/q-a)** — Ask questions about setup, pipelines, or troubleshooting
-
-Made something cool? Post it in Show and Tell — we'd love to see what you build.
+> **即将推出：** 通过 **Ollama** 和 **LM Studio** 支持本地 LLM——不依赖任何云端 LLM 即可运行完整的制作管线。
 
 ---
 
-## Contact
+## 参与贡献
 
-For updates, releases, and behind-the-scenes build notes, follow [@calesthioailabs](https://x.com/calesthioailabs).
+OpenMontage 为扩展而生。最常见的两类贡献：
 
-For bugs, feature requests, and workflow discussions, use [GitHub Issues](https://github.com/calesthio/OpenMontage/issues) and [GitHub Discussions](https://github.com/calesthio/OpenMontage/discussions) so everything stays visible and actionable.
+### 添加新工具
+
+1. 在合适的 `tools/` 子目录中创建一个 Python 文件
+2. 继承 `BaseTool` 并实现工具契约
+3. 注册表会自动发现它——无需手动注册
+4. 如果工具需要用法指导，添加一个技能文件
+
+### 添加新管线
+
+1. 在 `pipeline_defs/` 中创建一个 YAML 清单
+2. 在 `skills/pipelines/<your-pipeline>/` 中创建阶段导演技能
+3. 引用现有工具——如有需要也可以添加新工具
+
+完整技术参考见 `docs/ARCHITECTURE.md`；完整提供商指南（配置、价格、免费额度）见 `docs/PROVIDERS.md`；智能体契约见 `AGENT_GUIDE.md`。
+
+### 加入社区
+
+我们使用 [GitHub Discussions](https://github.com/calesthio/OpenMontage/discussions) 分享作品和想法：
+
+- **[Show and Tell](https://github.com/calesthio/OpenMontage/discussions/categories/show-and-tell)**——分享你制作的视频、效果好的提示词，或你发现的创意工作流
+- **[Ideas](https://github.com/calesthio/OpenMontage/discussions/categories/ideas)**——提议新管线、新工具、新风格手册或新集成
+- **[Q&A](https://github.com/calesthio/OpenMontage/discussions/categories/q-a)**——询问安装、管线或故障排查相关问题
+
+做出了很酷的东西？发到 Show and Tell 吧——我们很期待看到你的作品。
 
 ---
 
-## Testing
+## 联系方式
+
+想获取更新、发布动态和幕后开发笔记，请关注 [@calesthioailabs](https://x.com/calesthioailabs)。
+
+反馈 bug、功能请求和工作流讨论，请使用 [GitHub Issues](https://github.com/calesthio/OpenMontage/issues) 和 [GitHub Discussions](https://github.com/calesthio/OpenMontage/discussions)，让所有信息保持可见、可跟进。
+
+---
+
+## 测试
 
 ```bash
-# Run contract tests (no API keys needed)
+# 运行契约测试（无需 API 密钥）
 make test-contracts
 
-# Run all tests
+# 运行全部测试
 make test
 ```
 
 ---
 
-## Star History
+## Star 历史
 
 <a href="https://www.star-history.com/?repos=calesthio%2FOpenMontage&type=date&legend=top-left">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=calesthio/OpenMontage&type=date&theme=dark&legend=top-left" />
     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=calesthio/OpenMontage&type=date&legend=top-left" />
-    <img alt="Star History Chart" src="https://api.star-history.com/image?repos=calesthio/OpenMontage&type=date&legend=top-left" />
+    <img alt="Star 历史图表" src="https://api.star-history.com/image?repos=calesthio/OpenMontage&type=date&legend=top-left" />
   </picture>
 </a>
 
 ---
 
-## License
+## 许可证
 
 [GNU AGPLv3](LICENSE)
 
 ---
 
-**OpenMontage** — Production-grade video with real quality enforcement, orchestrated by your AI assistant.
+**OpenMontage** —— 具备真正质量强制力的生产级视频，由你的 AI 助手编排。
 
-If this project looks useful to you, a ⭐ would really mean a lot — it helps others discover it too.
+如果这个项目对你有用，点个 ⭐ 意义非凡——它也能帮助更多人发现这个项目。
 
-If you'd like to go further, [sponsor the project](https://github.com/sponsors/calesthio) — OpenMontage is built nights and weekends, and your support makes that sustainable.
+如果你想更进一步，欢迎[赞助本项目](https://github.com/sponsors/calesthio)——OpenMontage 是在夜晚和周末构建的，你的支持让这一切可持续。

@@ -1,10 +1,10 @@
-"""Backlot CLI.
+"""Backlot 命令行工具（CLI）。
 
-    python -m backlot open [project-id]   # start server if needed, open browser
-    python -m backlot serve [--port N]    # run the server in the foreground
+    python -m backlot open [project-id]   # 如需要则启动服务器，并打开浏览器
+    python -m backlot serve [--port N]    # 在前台运行服务器
 
-``open`` is idempotent and non-fatal by design: agents call it at pipeline
-initialization and must continue the production even if it fails.
+``open`` 在设计上具有幂等性且失败不致命：智能体会在管线初始化时
+调用它，即使调用失败也必须继续后续的制作流程。
 """
 
 from __future__ import annotations
@@ -58,7 +58,7 @@ def cmd_open(project_id: str | None) -> int:
         try:
             _spawn_server(port)
         except Exception as exc:
-            print(f"backlot: could not start server ({exc}) — continuing without the board")
+            print(f"backlot: 无法启动服务器（{exc}）——将在没有看板的情况下继续")
             return 1
         deadline = time.time() + 15
         while time.time() < deadline:
@@ -66,7 +66,7 @@ def cmd_open(project_id: str | None) -> int:
                 break
             time.sleep(0.4)
         else:
-            print("backlot: server did not come up in time — continuing without the board")
+            print("backlot: 服务器未能及时启动——将在没有看板的情况下继续")
             return 1
     url = f"http://127.0.0.1:{port}/"
     if project_id:
@@ -90,10 +90,10 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="backlot", description=__doc__)
     sub = parser.add_subparsers(dest="command")
 
-    p_open = sub.add_parser("open", help="open the board in the browser (starts server if needed)")
+    p_open = sub.add_parser("open", help="在浏览器中打开看板（如需要会自动启动服务器）")
     p_open.add_argument("project_id", nargs="?", default=None)
 
-    p_serve = sub.add_parser("serve", help="run the Backlot server in the foreground")
+    p_serve = sub.add_parser("serve", help="在前台运行 Backlot 服务器")
     p_serve.add_argument("--port", type=int, default=_port())
 
     args = parser.parse_args(argv)

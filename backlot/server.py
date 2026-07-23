@@ -1,8 +1,8 @@
-"""Backlot server — FastAPI app: board state API, SSE change feed, media.
+"""Backlot 服务器 —— FastAPI 应用：看板状态 API、SSE 变更推送、媒体服务。
 
-The watcher observes ``projects/`` with watchfiles; on any change it bumps a
-per-project version and wakes SSE subscribers, who tell the browser to
-refetch state. The server never writes to project directories.
+watcher 通过 watchfiles 监听 ``projects/`` 目录；一旦发生变更，它会递增
+对应项目的版本号并唤醒 SSE 订阅者，由订阅者通知浏览器重新拉取状态。
+服务器绝不会写入项目目录。
 """
 
 from __future__ import annotations
@@ -243,16 +243,16 @@ def create_app() -> FastAPI:
         try:
             target.relative_to(project_dir.resolve())
         except ValueError:
-            raise HTTPException(status_code=403, detail="path escapes project")
+            raise HTTPException(status_code=403, detail="路径越出项目目录")
         if not target.is_file():
-            raise HTTPException(status_code=404, detail="media not found")
+            raise HTTPException(status_code=404, detail="未找到媒体文件")
         width = min(THUMB_WIDTHS, key=lambda x: abs(x - w))
         cached = await asyncio.to_thread(_thumbnail_for, target, width)
         if cached is None:
             # Never fall back to raw video bytes for an <img> consumer (F-03);
             # non-thumbable images are safe to serve as-is.
             if target.suffix.lower() in {".mp4", ".webm", ".mov"}:
-                raise HTTPException(status_code=404, detail="no poster frame available")
+                raise HTTPException(status_code=404, detail="没有可用的封面帧")
             return FileResponse(target)
         return FileResponse(cached, media_type="image/jpeg")
 
@@ -265,9 +265,9 @@ def create_app() -> FastAPI:
         try:
             target.relative_to(project_dir.resolve())
         except ValueError:
-            raise HTTPException(status_code=403, detail="path escapes project")
+            raise HTTPException(status_code=403, detail="路径越出项目目录")
         if not target.is_file():
-            raise HTTPException(status_code=404, detail="media not found")
+            raise HTTPException(status_code=404, detail="未找到媒体文件")
         return FileResponse(target)
 
     # ---- UI ------------------------------------------------------------
@@ -306,10 +306,10 @@ def _safe_project_dir(project_id: str) -> Path:
     # ':' rejects Windows drive-relative ids like "C:" (PROJECTS_DIR / "C:"
     # collapses back to PROJECTS_DIR itself).
     if any(c in project_id for c in "/\\:") or project_id in (".", ".."):
-        raise HTTPException(status_code=400, detail="invalid project id")
+        raise HTTPException(status_code=400, detail="无效的项目 ID")
     project_dir = PROJECTS_DIR / project_id
     if not project_dir.is_dir():
-        raise HTTPException(status_code=404, detail=f"unknown project: {project_id}")
+        raise HTTPException(status_code=404, detail=f"未知项目：{project_id}")
     return project_dir
 
 
