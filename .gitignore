@@ -21,3 +21,11 @@ Thumbs.db
 # Backlot
 .backlot/
 projects/
+
+# Sidecar 二进制与 PyInstaller 产物（由 packaging/ 或 CI 生成）
+desktop-shell/src-tauri/binaries/
+packaging/build/
+packaging/dist/
+
+# 测试产物
+tests/qa/output/

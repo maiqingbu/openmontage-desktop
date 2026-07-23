@@ -200,14 +200,33 @@ class AgnesVideo(BaseTool):
             "Content-Type": "application/json",
         }
 
+        # 瞬时网络错误（SSL 中断/连接重置）在提交与轮询阶段均可重试
+        max_consecutive_network_errors = 5
+
         try:
-            submit_resp = requests.post(
-                f"{base_url}/videos",
-                headers=headers,
-                json=payload,
-                timeout=30,
-            )
-            submit_resp.raise_for_status()
+            submit_resp = None
+            last_submit_error: Exception | None = None
+            for _attempt in range(3):
+                try:
+                    submit_resp = requests.post(
+                        f"{base_url}/videos",
+                        headers=headers,
+                        json=payload,
+                        timeout=30,
+                    )
+                    submit_resp.raise_for_status()
+                    break
+                except requests.exceptions.HTTPError:
+                    raise
+                except Exception as e:  # SSL/连接类瞬时错误
+                    last_submit_error = e
+                    time.sleep(3)
+            if submit_resp is None:
+                return ToolResult(
+                    success=False,
+                    error=f"Agnes 任务提交失败（已重试 3 次）: {last_submit_error}",
+                )
+
             task_data = submit_resp.json()
             video_id = task_data.get("video_id") or task_data.get("id")
 
@@ -220,6 +239,7 @@ class AgnesVideo(BaseTool):
             max_poll_seconds = 600
             poll_start = time.time()
             poll_interval = 5
+            consecutive_errors = 0
 
             while True:
                 if time.time() - poll_start > max_poll_seconds:
@@ -229,12 +249,25 @@ class AgnesVideo(BaseTool):
                     )
 
                 time.sleep(poll_interval)
-                status_resp = requests.get(
-                    f"{base_url}/videos/{video_id}",
-                    headers=headers,
-                    timeout=15,
-                )
-                status_resp.raise_for_status()
+                try:
+                    status_resp = requests.get(
+                        f"{base_url}/videos/{video_id}",
+                        headers=headers,
+                        timeout=15,
+                    )
+                    status_resp.raise_for_status()
+                    consecutive_errors = 0
+                except requests.exceptions.HTTPError:
+                    raise
+                except Exception as e:
+                    consecutive_errors += 1
+                    if consecutive_errors >= max_consecutive_network_errors:
+                        return ToolResult(
+                            success=False,
+                            error=f"Agnes 状态轮询连续失败 {consecutive_errors} 次: {e}（任务 ID: {video_id}）",
+                        )
+                    continue
+
                 status_data = status_resp.json()
                 status = status_data.get("status", "unknown")
 

@@ -336,8 +336,8 @@
     </div>
   </div>
 
-  <script type="module">
-    import { invoke } from 'https://esm.sh/@tauri-apps/api@2/core';
+  <script>
+    const { invoke } = window.__TAURI__.core;
 
     let backlotRunning = false;
     let backlotUrl = 'http://127.0.0.1:4750';
